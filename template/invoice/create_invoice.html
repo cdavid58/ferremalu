@@ -1,0 +1,519 @@
+{% extends '../base.html' %}
+{% block loading %}Vamos a crear una factura {{type_invoice}}{% endblock %}
+{% load static %}
+{% block content %}
+<div class="row bg-title">
+    <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+        <h4 class="page-title">Facturación {{type_invoice}}</h4>
+    </div>
+    <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        <h4 class="pull-right" style="text-decoration: none;color: black;">Número #{{consecutive}}</h4>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<br>
+<div class="pd-20 card-box mb-30">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="form-group">
+				<label>CLIENTE</label>
+				<select class="custom-select2 form-control list_client" name="client" style="width: 100%; height: 38px;">
+					<option selected="true" disabled="disabled" value="0">CLIENTE GENERAL</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<div class="form-group">
+				<label>DIRECCIÓN</label>
+				<input class="form-control address_client" type="text" disabled placeholder="CRA 40 #49-24">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label>TELÉFONO</label>
+				<input class="form-control phone_client text-right" type="text" disabled placeholder="3015700795">
+			</div>
+		</div>
+		<div class="col-md-1">
+			<div class="form-group">
+				<label>STOCK</label>
+				<input class="form-control stock text-right" type="number" disabled value="0">
+			</div>
+		</div>
+		<div class="col-md-1">
+			<div class="form-group">
+				<label>TIPO C</label>
+				<input class="form-control type_client text-right" id="type_client" type="number" disabled value="1">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label>FORM. PAGO</label>
+				<select class="custom-select2 form-control payment_form" name="client" style="width: 100%; height: 38px;">
+					<option value="1">EFECTIVO</option>
+					<option value="2">CREDITO</option>
+					<option value="3">TRANSF.</option>
+				</select>
+			</div>
+		</div>
+		<div class="col-md-4 date_expired" hidden>
+			<div class="form-group">
+				<label>Fecha de Vencimiento</label>
+				<input class="form-control datetimepicker-range" id="date_expireds" placeholder="Seleccione Fecha de Vencimiento" type="text">
+			</div>
+		</div>
+		<div class="col-md-2 date_expired" hidden>
+			<div class="form-group">
+				<label>Asignar Fecha</label>
+				<button type="button" class="btn btn-primary date_expireds">CLICK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="pd-20 card-box mb-30">
+	<div class="row">
+		<div class="col-md-3">
+			<div class="form-group">
+				<label>BUSCAR PRODUCTO</label>
+				<input class="form-control product" type="text" autofocus>
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label>Precio</label>
+				<input class="form-control price text-right" type="price" disabled placeholder="0">
+			</div>
+		</div>
+		<div class="col-md-2">
+			<div class="form-group">
+				<label>CANTIDAD</label>
+				<input class="form-control quanty text-right" id="quanty" type="text" disabled placeholder="0">
+			</div>
+		</div>
+		<div class="col-md-1">
+			<div class="form-group">
+				<label>DESC.</label>
+				<input class="form-control discount text-right" id="discount" type="number" disabled placeholder="0">
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="form-group">
+				<label>NOMBRE PRODUCTO</label>
+				<input class="form-control name_product" type="text" disabled value="0">
+			</div>
+		</div>
+		
+	</div>
+</div>
+<div class="pd-20 card-box mb-30 table-responsive">
+	<table class="table" id="father">
+		<thead>
+			<tr>
+				<th>CODIGO</th>
+				<th>DESCRIPCION</th>
+				<th>CANTIDAD</th>
+				<th>VAL. UNIT</th>
+				<th>IVA</th>
+				<th>VAL. IVA</th>
+				<th>DESC.</th>
+				<th>VAL. DESC.</th>
+				<th>SUBTOTAL</th>
+			</tr>
+		</thead>
+		<tbody class="father"></tbody>
+	</table>
+</div>
+
+<div class="pd-20 card-box mb-30 col-sm-3 col-12 ml-auto">
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>SubTotal:</td>
+				<td style="text-align: right;">$ &nbsp;<span id="Subtotal_Invoice">0</span></td>
+			</tr>
+			<tr>
+				<td>Descuento:</td>
+				<td style="text-align: right;">$ &nbsp;<span id="Neto_Invoice">0</span></td>
+			</tr>
+			<tr>
+				<td>Impuesto:</td>
+				<td style="text-align: right;">$ &nbsp;<span id="Tax_Invoice">0</span></td>
+			</tr>
+			<tr>
+				<td>Total:</td>
+				<td style="text-align: right;">$ &nbsp;<span id="Totals_Invoice">0</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<div class="pd-20 card-box mb-10">
+	<div class="row">
+		<button class="col-12 btn btn-primary send_invoice">FACTURAR</button>
+	</div>
+</div>
+
+
+<!-- ALERTS -->
+
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="Add_not_quanty_invoice">Add_not_quanty_invoice</button>
+<button type="button" class="btn mb-20 btn-primary btn-block Product_DoesNotExist" hidden id="Product_DoesNotExist">Product_DoesNotExist</button>
+<button type="button" class="btn mb-20 btn-primary btn-block Error_Invoice" hidden id="Error_Invoice">Product_DoesNotExist</button>
+<button type="button" class="btn mb-20 btn-primary btn-block Error_Sold_Out" hidden id="Error_Sold_Out">Product_DoesNotExist</button>
+
+<!-- END ALERTS -->
+
+
+
+
+
+{% endblock %}
+{% block script %}
+	<script src="{% static 'jquery.tabletojson.min.js' %}"></script>
+	<script>
+
+		let product;
+		let product_table = []
+		let regex = /(\d+)/g;
+
+		function GetData(class_container,url){
+			$.get(url, function(data) {
+		        var content = data;
+		        let id_document = parseInt("{{c.type_documentI_pk}}")
+		        console.log(id_document)
+		        for(var i = 0; i < content.length; i++){
+		        	if( id_document != parseInt(content[i]['pk']) ){
+			        	$("."+class_container).append(`
+			        		<option value="${content[i]['pk']}">${content[i]['name']}</option>
+			        	`)
+			        }
+		        }
+		    })
+		}
+		
+
+		$(document).ready(function(){
+
+			GetData("list_client","http://localhost:8000/static/clients.json")
+
+			$(".list_client").change(function(){
+				$.ajax({
+					url:"{% url 'GET_CLIENT' %}",
+					data:{'pk':$(".list_client").val()},
+					success:function(data) {
+						obj = JSON.parse(data)
+						$(".address_client").val(obj['address'])
+						$(".phone_client").val(obj['phone'])
+						$(".type_client").val(obj['type'])
+					}
+				})
+			})
+
+			$(".payment_form").change(function(){
+				$.ajax({
+					url:"{% url 'Set_Payment_Form' %}",
+					data:{'pk':$(".payment_form").val()},
+					success:function(data) {
+						value_payment_form = parseInt($(".payment_form").val())
+						if(value_payment_form == 2){
+							$(".date_expired").prop('hidden', false);
+						}
+						else{
+							$(".date_expired").prop('hidden', true);	
+						}
+					}
+				})
+			})
+
+			$(".date_expireds").click(function(){
+				$.ajax({
+					url:"{% url 'Date_Expired' %}",
+					data:{'date_expired':$("#date_expireds").val()},
+					success:function(data){
+					}
+				})
+			})
+
+
+			function ClearField(){
+				$(".quanty").val('')
+				$(".product").val('')
+				$(".discount").val('')
+				$(".price").val('')
+				$(".name_product").val('')
+				$(".product").focus()
+				$(".discount").prop('disabled', true);
+				$(".quanty").prop('disabled', true);
+			}
+
+			function GetPrice(type_client){
+				let price;
+				if(type_client == 1){
+					price = product['price_1']
+				}
+				else if(type_client == 2){
+					price = product['price_2']
+				}
+				else if(type_client == 3){
+					price = product['price_3']
+				}
+				else if(type_client == 4){
+					price = product['price_4']
+				}
+				else if(type_client == 5){
+					price = product['price_5']
+				}
+				return price
+			}
+
+			function SearchProductInTable(){
+				exist = false
+				var filas = $(".father").find("tr");
+	            var resultado = "";
+	            for(i=0; i<filas.length; i++){
+	                var celdas = $(filas[i]).find("td");
+	                if($(celdas[0]).text() == product['code']){
+	                	exist = true
+	                	quanty_table = parseFloat($(celdas[2]).text()) + parseFloat($(".quanty").val())
+	                	price_table = parseFloat($(celdas[3]).text())
+	                	subtotal_row_table = quanty_table * price
+	                	$(celdas[8]).text(subtotal_row_table)
+
+	                }
+	            }
+	            return exist
+			}
+
+			function ProductExist(){
+				var filas = $(".father").find("tr");
+	            var resultado = "";
+	            for(i=0; i<filas.length; i++){
+	                var celdas = $(filas[i]).find("td");
+	                if($(celdas[0]).text() == product['code']){
+	                	quanty = parseInt($("#quanty").val()) + parseInt($(celdas[2]).text())
+	                	if(quanty == 0){
+	                		$(filas[i]).remove();
+	                		ClearField()
+	                	}
+	                	else{
+		                	$(celdas[2]).text(quanty)
+		                	tax_val = ( price - (price / (1 + (parseFloat(product['tax']) / 100)))).toFixed(2)
+		                	tax = quanty * parseFloat(tax_val)
+		                	$(celdas[5]).text(tax)
+		                	price_row = parseFloat($(celdas[3]).text())
+		                	$(celdas[8]).text(price_row * quanty)
+		                }
+	                }
+	            }
+	            CalculateTotalsInvoice()
+			}
+
+			function CalculateDiscount(){
+
+			}
+
+			function CalculateTotalsInvoice(){
+				var filas = $(".father").find("tr");
+				console.log(filas)
+	            var resultado = "";
+	            let subtotal_row_table_invoice = 0
+				let tax_row_table_invoice = 0
+	            for(i=0; i<filas.length; i++){
+	                var celdas = $(filas[i]).find("td");
+                	subtotal_row_table_invoice += parseFloat($(celdas[8]).text())
+                	tax_row_table_invoice += parseFloat($(celdas[5]).text())
+	            }
+	            $("#Subtotal_Invoice").text(subtotal_row_table_invoice.toFixed(2))
+	            $("#Totals_Invoice").text((subtotal_row_table_invoice + tax_row_table_invoice).toFixed(2))
+	            $("#Tax_Invoice").text(tax_row_table_invoice.toFixed(2))
+
+			}
+
+			// $(".product").keyup(function(e) {
+			// 	var code = (e.keyCode ? e.keyCode : e.which);
+			// 	// if(code == 80){
+			// 	// 	$(".product").click()
+			// 	// }
+			// })
+			
+			$(".product").change(function(){
+
+				$.ajax({
+					url:"{% url 'GET_PRODUCT' %}",
+					data:{'value':$('.product').val()},
+					success:function(data){
+						obj = JSON.parse(data)
+						console.log(obj)
+						if(Object.keys(obj).length !== 0){
+							product = obj
+							$(".stock").val(obj['quanty'])
+							$(".name_product").val(obj['name'])
+							type_client = parseInt($(".type_client").val())
+							$(".price").val(GetPrice(type_client))
+							$(".quanty").prop('disabled', false);
+							$("#quanty").focus()
+							product_table.push(product)
+						}
+						else{
+							console.log("No existe el producto")
+							$(".Product_DoesNotExist").click()
+							$(".product").val('')
+							$(".product").focus()							
+						}
+					}
+				})
+			})
+
+			$(".quanty").keyup(function(e){
+				number = $("#quanty").val()
+				try {
+					var code = (e.keyCode ? e.keyCode : e.which);
+					if(code == 68){
+						number_result = number.match(regex)[0];
+						$("#quanty").val(number_result)
+						$(".discount").prop('disabled', false);
+						$("#discount").focus()
+					}
+					else if(code == 13){
+						console.log(number)
+						discount = 0
+						price = GetPrice(type_client)
+						console.log(typeof price)
+						if(price <= 0){
+							console.log("No puede facturar en cero")
+							$("#Add_not_quanty_invoice").click()
+						}
+						else{
+							value_discount = (parseFloat(price) * discount)
+							price_total = parseFloat(price) - value_discount
+							if(number != "" && parseInt(number) != 0){
+								if(SearchProductInTable() == false){
+									AddToTable()
+									$("#quanty").val('')
+								}
+								else
+								{
+									ProductExist()
+									$("#quanty").val('')
+								}
+							}
+							else{
+								$("#Add_not_quanty_invoice").click()
+							}
+						}						
+					}
+					else if(code == 66){
+						ClearField()
+					}
+					else if(code == 70){
+						SaveInvoice()
+					}
+				}catch(error){
+					console.log(error)
+					$("#Add_not_quanty_invoice").click()
+					$("#quanty").val('')
+				}
+				
+				
+			})
+
+			$(".discount").keyup(function(e){
+				var code = (e.keyCode ? e.keyCode : e.which);
+				if( $(".discount").val() != ''){
+					discount = parseFloat($(".discount").val()) / 100
+					price = GetPrice(type_client)
+					value_discount = (parseFloat(price) * discount)
+					price_total = parseFloat(price) - value_discount
+					$(".price").val(price_total)
+					discount = $(".discount").val()
+					if(code == 13){
+						if(SearchProductInTable() == false){
+							AddToTable()
+							$("#quanty").val('')
+						}
+						else
+						{
+							ProductExist()
+							$("#quanty").val('')
+						}
+					}
+				}
+			})
+
+			function AddToTable(){
+				number = $("#quanty").val()
+				number_result = number.match(regex)[0]
+				quanty = parseInt(number_result)
+				type_client = parseInt($(".type_client").val())
+				price = parseFloat(GetPrice(type_client)).toFixed(2)
+				tax_val = ( price - (price / (1 + (parseFloat(product['tax']) / 100)))).toFixed(2)
+				price -= tax_val
+				subtotal = parseInt($(".price").val()) * quanty
+				subtotal = subtotal - tax_val
+				$(".father").append(`
+					<tr id="${product['code']}">
+						<td>
+							${product['code']}
+						</td>
+						<td>
+							${product['name']}
+						</td>
+						<td>
+							${quanty}
+						</td>
+						<td>
+							${price}
+						</td>
+						<td>
+							${product['tax']}%
+						</td>
+						<td>
+							${tax_val}
+						</td>
+						<td>
+							${discount}%
+						</td>
+						<td>
+							${value_discount}
+						</td>
+						<td>
+							${subtotal}
+						</td>
+
+					</tr>
+				`)
+				// ClearField()
+				CalculateTotalsInvoice()
+			}
+
+			$(".send_invoice").click(function(){
+				if( $(".list_client").val() !== null && $('#father').tableToJSON().length >= 1){
+					SaveInvoice()
+				}
+				else{
+					$(".Error_Invoice").click()
+				}
+			})
+
+			function SaveInvoice(){
+				$("#REGISTRAMOSCLIENTE").click()
+				var table = $('#father').tableToJSON();
+				$.ajax({
+					url:"{% url 'Save_Invoice' %}",
+					data:JSON.stringify(table),
+					success:function(data){
+						if(data == 'True'){
+							location.reload(true)
+						}
+						else
+						{
+							$(".Error_Sold_Out").click()	
+						}
+					}
+				})
+			}
+		})
+	</script>
+
+{% endblock %}

@@ -1,0 +1,74 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+WARNING:django.request:Not Found: /home/Index/vendors/images/github.svg
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /invoice_fe/GET_LIST_INVOICE/ HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /invoice_fe/GET_LIST_INVOICE/ HTTP/1.1" 200 256
+DEBUG:chardet.charsetprober:EUC-TW Taiwan prober hit error at byte 89
+DEBUG:chardet.charsetprober:utf-8  confidence = 0.7525
+DEBUG:chardet.charsetprober:SHIFT_JIS Japanese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-JP Japanese confidence = 0.01
+DEBUG:chardet.charsetprober:GB2312 Chinese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-KR Korean confidence = 0.01
+DEBUG:chardet.charsetprober:CP949 Korean confidence = 0.01
+DEBUG:chardet.charsetprober:Big5 Chinese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-TW not active
+DEBUG:chardet.charsetprober:windows-1251 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:KOI8-R Russian confidence = 0.01
+DEBUG:chardet.charsetprober:ISO-8859-5 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:MacCyrillic Russian confidence = 0.01
+DEBUG:chardet.charsetprober:IBM866 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:IBM855 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:ISO-8859-7 Greek confidence = 0.0
+DEBUG:chardet.charsetprober:windows-1253 Greek confidence = 0.0
+DEBUG:chardet.charsetprober:ISO-8859-5 Bulgairan confidence = 0.01
+DEBUG:chardet.charsetprober:windows-1251 Bulgarian confidence = 0.01
+DEBUG:chardet.charsetprober:TIS-620 Thai confidence = 0.0
+DEBUG:chardet.charsetprober:ISO-8859-9 Turkish confidence = 0.547337993358714
+DEBUG:chardet.charsetprober:windows-1255 Hebrew confidence = 0.0
+DEBUG:chardet.charsetprober:windows-1255 Hebrew confidence = 0.0
+DEBUG:chardet.charsetprober:windows-1255 Hebrew confidence = 0.0
+DEBUG:chardet.charsetprober:utf-8  confidence = 0.7525
+DEBUG:chardet.charsetprober:SHIFT_JIS Japanese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-JP Japanese confidence = 0.01
+DEBUG:chardet.charsetprober:GB2312 Chinese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-KR Korean confidence = 0.01
+DEBUG:chardet.charsetprober:CP949 Korean confidence = 0.01
+DEBUG:chardet.charsetprober:Big5 Chinese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-TW not active
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /client/GET_LIST_CLIENT/ HTTP/1.1" 200 116
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 633
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /employee/GET_LIST_EMPLOYEE/ HTTP/1.1" 200 229
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 633
+WARNING:django.request:Not Found: /inventory/List_Inventory/vendors/images/github.svg
+WARNING:django.request:Not Found: /inventory/List_Inventory/vendors/images/github.svg
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/DELETE_PRODUCT/ HTTP/1.1" 200 15
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/DELETE_PRODUCT/ HTTP/1.1" 200 15
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 317
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/DELETE_PRODUCT/ HTTP/1.1" 200 15
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+WARNING:django.request:Not Found: /inventory/Montage_Inventory/vendors/images/github.svg
+WARNING:django.request:Not Found: /inventory/Montage_Inventory/vendors/images/github.svg
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 159
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/DELETE_PRODUCT/ HTTP/1.1" 200 15
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 2
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 2
+WARNING:django.request:Not Found: /inventory/Montage_Inventory/vendors/images/github.svg
+WARNING:django.request:Not Found: /inventory/Montage_Inventory/vendors/images/github.svg
+WARNING:django.request:Not Found: /inventory/Montage_Inventory/vendors/images/github.svg
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /inventory/GET_LIST_INVENTORY/ HTTP/1.1" 200 2
+WARNING:django.request:Not Found: /inventory/List_Inventory/vendors/images/github.svg
+WARNING:django.request:Not Found: /inventory/List_Inventory/vendors/images/github.svg
+INFO:django.utils.autoreload:C:\Users\David\Videos\Proyectos_Facturacion\local\Proyectos\listo reportes\facturacion\inventory\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor

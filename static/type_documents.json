@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1,
+        "name": "Factura de Venta Nacional"
+    },
+    {
+        "pk": 2,
+        "name": "Factura de Exportación"
+    },
+    {
+        "pk": 3,
+        "name": "Factura de Contingencia"
+    },
+    {
+        "pk": 4,
+        "name": "Nota Crédito"
+    },
+    {
+        "pk": 5,
+        "name": "Nota Débito"
+    },
+    {
+        "pk": 6,
+        "name": "ZIP"
+    },
+    {
+        "pk": 7,
+        "name": "AttachedDocument"
+    },
+    {
+        "pk": 8,
+        "name": "ApplicationResponse"
+    },
+    {
+        "pk": 9,
+        "name": "Nomina Individual"
+    },
+    {
+        "pk": 10,
+        "name": "Nomina Individual de Ajuste"
+    },
+    {
+        "pk": 11,
+        "name": "Documento Soporte Electrónico"
+    },
+    {
+        "pk": 12,
+        "name": "Factura electrónica de Venta - tipo 04"
+    }
+]

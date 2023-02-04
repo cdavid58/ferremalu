@@ -1,0 +1,145 @@
+{% extends '../base.html' %}
+{% block loading %}Editemos un cliente{% endblock %}
+{% block content %}
+<div class="alert_register_2"></div>
+<div class="pd-20 card-box mb-30">
+	<div class="clearfix">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Editar Cliente</h4>
+			<p class="mb-30">Son campos obligatorios los que tienen el <span style="color: red;">*</span></p>
+		</div>
+	</div>
+	<form class="form_data_client">
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Tipo de Documento <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<select name="type_documentI" class="custom-select col-12 document">
+					<option value="{{c.type_documentI_pk}}">{{c.type_documentI_name}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Doc. de Iden. con DV <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<input name="identification_number" class="form-control docI" type="text" value="{{c.identification_number}}-{{c.dv}}">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Nombre <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<input name="name" class="form-control" type="text" value="{{c.name}}">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Dirección</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="address" class="form-control" value="{{c.address}}" type="text">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Email</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="email" class="form-control" value="{{c.email}}" type="email">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Teléfono</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="phone" class="form-control" value="{{c.phone}}" type="tel">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Tipo de Organización <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<select name="type_organization" class="custom-select col-12 organization">
+					<option value="{{c.type_organization_pk}}">{{c.type_organization_name}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Tipo de Regimen <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<select name="type_regime" class="custom-select col-12 regime">
+					<option value="{{c.type_regime_pk}}">{{c.type_regime_name}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Tipo de Municipio <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<select name="municipality" class="custom-select col-12 municipality">
+					<option value="{{c.municipality_pk}}">{{c.municipality_name}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Tipo Cliente <span style="color: red;">*</span></label>
+			<div class="col-sm-12 col-md-10">
+				<select name="type_client" class="custom-select col-12 type_client">
+					<option value="{{c.type_client}}">{{c.type_client}}</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<button type="button" class="btn btn-primary register_client">Actualizar cliente</button>
+			<a type="button" href="{% url 'List_Client' %}" class="btn btn-primary ml-auto">Lista de cliente</a>
+		</div>
+	</form>
+</div>
+
+<button type="button" class="btn mb-20 btn-primary btn-block UPDATED_CLIENT" hidden id="UPDATED_CLIENT"></button>
+{% endblock %}
+{% block script %}
+<script>
+
+	function GetData(class_container,url,value){
+		$.get(url, function(data) {
+	        for(var i = 0; i < data.length; i++){
+	        	if( parseInt(value) !== parseInt(data[i]['pk']) ){
+		        	$("."+class_container).append(`
+		        		<option value="${data[i]['pk']}">${data[i]['name']}</option>
+		        	`)
+		        }
+	        }
+	    })
+	}
+	function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function time_sleep() {
+        for (let i = 0; i < 2; i++) {
+            console.log(`Waiting ${i} seconds...`);
+            await sleep(i * 1000);
+        }
+		$('html, body').animate({
+			scrollTop: $(".alert_register_2").offset().top
+		}, 1000);
+		$(".docI").focus()
+
+    }
+	$(document).ready(function(){
+
+		GetData("document","http://localhost:8000/static/type_documentI.json","{{c.type_documentI_pk}}")
+		GetData("organization","http://localhost:8000/static/type_organizations.json","{{c.type_organization_pk}}")
+		GetData("regime","http://localhost:8000/static/type_regimen.json","{{c.type_regime_pk}}")
+		GetData("municipality","http://localhost:8000/static/municipalitys.json","{{c.municipality_pk}}")
+		GetData("type_client","http://localhost:8000/static/type_client.json","{{c.type_client}}")
+
+
+		$(".register_client").click(function(){
+			$("#REGISTRAMOSCLIENTE").click()
+			$.ajax({
+				url:"{% url 'EDIT_CLIENT' %}",
+				data:$(".form_data_client").serialize(),
+				success:function(data){
+					if(data == "True"){
+						$(".UPDATED_CLIENT").click()
+						time_sleep()
+					}
+				}
+			})
+		})
+	})
+</script>
+{% endblock %}

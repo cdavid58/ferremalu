@@ -1,0 +1,125 @@
+{% extends '../base.html' %}
+{% block loading %}Estamos cargando la lista de inventario{% endblock %}
+{% block content %}
+<div class="page-header">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<div class="title">
+				<h4>Lista de inventario</h4>
+			</div>
+		</div>
+		{% if request.session.type_employee == 1 %}
+			<div class="col-md-3 col-sm-12 text-right">
+				<a class="btn btn-primary" href="{% url 'Montage_Inventory' %}" role="button">
+					Montar Inventario
+				</a>
+			</div>
+			<div class="col-md-3 col-sm-12 text-right">
+				<a class="btn btn-primary add_product" href="#" role="button">
+					Agregar Producto
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</div>
+<div class="card-box mb-30">
+	<div class="pd-20">
+		<h4 class="text-blue h4"></h4>
+	</div>
+	<div class="pb-20">
+		<table id="add_to_table_inventory" class="table stripe hover nowrap">
+			<thead>
+				<tr>
+					<th class="table-plus datatable-nosort" style="width: 10%;">Código</th>
+					<th style="width: 25%;">Producto</th>
+					<th style="width: 7%;">Cantidad</th>
+					<th style="width: 7%;">IVA</th>
+					{% if request.session.type_employee == 1 %}
+						<th class="datatable-nosort" style="width: 10%;">Action</th>
+					{% endif %}
+				</tr>
+			</thead>
+			<tbody class="father"></tbody>
+		</table>
+	</div>
+</div>
+{% endblock %}
+{% block script %}
+
+<script>
+	function Add_Inventory(){
+		url = '{{json}}'
+		$.get(url, function(data) {
+	        var content = data;
+	        var type_employee = parseInt('{{request.session.type_employee}}')
+	        for(var i = 0; i < content.length; i++){
+	        	t.row.add([
+					content[i].code, content[i].name, content[i].quanty, content[i].tax, 
+					`
+					${(type_employee == 1) ? 
+							`<td>
+								<div class="dropdown">
+									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+										<i class="dw dw-more"></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+										<a class="dropdown-item" href="http://localhost:8000/inventory/Edit_Product/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
+										<a class="dropdown-item delete_product" id="${content[i]['code']}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
+									</div>
+								</div>
+							</td>
+							`:''
+						}
+					`
+				]).draw(false);
+	        }
+	    })
+	}
+	
+
+    $(document).ready(function(){
+
+
+    	t = $('#add_to_table_inventory').DataTable({
+    		destroy:true,
+    		scrollCollapse: true,
+			autoWidth: false,
+			responsive: true,
+			columnDefs: [{
+				targets: "datatable-nosort",
+				orderable: false,
+			}],
+			"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+			"language": {
+				"info": "_START_-_END_ de _TOTAL_ Productos",
+				searchPlaceholder: "Buscar producto",
+				paginate: {
+					next: '<i class="ion-chevron-right"></i>',
+					previous: '<i class="ion-chevron-left"></i>'  
+				}
+			}
+    	})
+
+    	Add_Inventory()
+
+
+
+    	$(".add_product").click(function() {
+    		location.href = "{% url 'Add_Product' %}"
+    	})
+
+    	t.on('click', '.delete_product', function() {
+    		
+			id = this.id
+			tr = $(this).closest('tr');
+			t.row(tr).remove().draw(false);
+    		$.ajax({
+    			url:"{% url 'DELETE_PRODUCT' %}",
+    			data:{'code':id}
+    		})
+    	})
+
+    })
+</script>
+
+{% endblock %}

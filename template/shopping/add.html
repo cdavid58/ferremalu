@@ -1,0 +1,569 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block loading %}Registremos una compra{% endblock %}
+{% block style %}
+<style>
+	#contenedor video{
+		max-width: 100%;
+		width: 100%;
+	}
+	#contenedor{
+		max-width: 100%;
+		position:relative;
+	}
+	canvas{
+		max-width: 100%;
+	}
+	canvas.drawingBuffer{
+		position:absolute;
+		top:0;
+		left:0;
+	}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="alert_register_2"></div>
+<div class="alert alert-primary alert-dismissible fade show alert_register" hidden role="alert">
+	<strong>Producto Registrado Exitosamente!.</strong>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">×</span>
+	</button>
+</div>
+<div class="pd-20 card-box mb-30">
+	<div class="clearfix">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Agregar Compra</h4>
+		</div>
+	</div>
+		<div class="form-group row">
+			<div class="col-md-4 col-sm-12">
+				<div class="form-group">
+					<label>Factura</label>
+					<input type="number" name="invoice_number" placeholder="0" autofocus class="form-control text-right invoice_number">
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="form-group">
+					<label>Fecha</label>
+					<input type="text" name="invoice_number" disabled value="{{today}}" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-12">
+				<div class="form-group">
+					<label>Proveedor</label>
+					<select name="type_document" class="custom-select col-12 document">
+						<option value="1">PROVEEDOR GENERAL</option>
+					</select>
+				</div>
+			</div>
+
+
+
+			<div class="col-md-4 col-sm-12">
+				<div class="form-group">
+					<label>Código Producto</label>
+					<input type="number" name="code" placeholder="0" class="form-control code_product text-right">
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-12">
+				<div class="form-group">
+					<label>Lector código de barra</label>
+					<button class="btn btn-primary code_bars" type="button">Usar Escaner</button>
+				</div>
+			</div>
+			<div class="col-md-5 col-sm-12">
+				<div class="form-group">
+					<label>Nombre Producto</label>
+					<input type="text" name="name" disabled placeholder="Nombre del producto" class="form-control name_product">
+				</div>
+			</div>
+			<!-- SECTION ONE -->
+
+			<div class="col-md-3 col-6">
+				<div class="form-group">
+					<label>Costo</label>
+					<input type="number" name="cost" placeholder="0" class="form-control text-right cost">
+				</div>
+			</div>
+			<div class="col-md-3 col-6">
+				<div class="form-group">
+					<label>IVA</label>
+					<input type="number" name="tax" placeholder="0" class="form-control text-right tax">
+				</div>
+			</div>
+			<div class="col-md-3 col-6">
+				<div class="form-group">
+					<label>Cantidad</label>
+					<input type="number" name="quanty" placeholder="0" class="form-control text-right quanty">
+				</div>
+			</div>
+			<div class="col-md-3 col-6">
+				<div class="form-group">
+					<label>ICO Consumo</label>
+					<input type="number" name="ICO" disabled value="0" class="form-control text-right">
+				</div>
+			</div>
+
+
+			<!-- SECTION TWO -->
+			<div class="col-md-2 col-6">
+				<div class="form-group">
+					<label>Precio 1</label>
+					<input type="number" name="price_1" value="0" class="form-control text-right price_1">
+				</div>
+			</div>
+			<div class="col-md-2 col-6">
+				<div class="form-group">
+					<label>Precio 2</label>
+					<input type="number" name="price_2" value="0" class="form-control text-right price_2">
+				</div>
+			</div>
+			<div class="col-md-2 col-6">
+				<div class="form-group">
+					<label>Precio 3</label>
+					<input type="number" name="price_3" value="0" class="form-control text-right price_3">
+				</div>
+			</div>
+			<div class="col-md-2 col-6">
+				<div class="form-group">
+					<label>Precio 4</label>
+					<input type="number" name="price_4" value="0" class="form-control text-right price_4">
+				</div>
+			</div>
+			<div class="col-md-2 col-6">
+				<div class="form-group">
+					<label>Precio 5</label>
+					<input type="number" name="price_5" value="0" class="form-control text-right price_5">
+				</div>
+			</div>
+			<div class="col-md-2 col-6">
+				<div class="form-group">
+					<label>Agregar</label>
+					<button type="button" class="btn btn-primary form-control add_product_to_list text-white">Agregar</button>
+				</div>
+			</div>
+		</div>
+</div>
+
+
+
+<div class="card-box mb-30">
+	<div class="pd-20">
+		<h4 class="text-blue h4">
+		</h4>
+	</div>
+	<div class="pb-20">
+		<table id="table_shopping_example" class="list_shopping table stripe hover nowrap">
+			<thead>
+				<tr>
+					<th>CODIGO</th>
+					<th>DESCRIPCION</th>
+					<th>CANTIDAD</th>
+					<th>COSTO</th>
+					<th>IVA</th>
+					<th>P1</th>
+					<th>P2</th>
+					<th>P3</th>
+					<th>P4</th>
+					<th>P5</th>
+					<th>Accion</th>
+				</tr>
+			</thead>
+			<tbody class="father">
+			</tbody>
+		</table>
+	</div>
+</div>
+<div class="card-box mb-30">
+	<button class="btn btn-primary btn-lg save_shopping col-12" type="button">Grabar compra</button>
+</div>
+
+<a href="#" hidden class="btn-block modal_scanner_cod_bars" data-toggle="modal" data-target="#bd-example-modal-lg" type="button">
+	escaner
+</a>
+
+
+
+<div class="modal fade bs-example-modal-lg" id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myLargeModalLabel">Escaner de código de barras</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body">
+				<!-- <p id="resultado">Aquí aparecerá el código</p>
+				<p>A continuación, el contenedor: </p> -->
+				<div id="contenedor"></div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary close_modal_code_bars" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="PRODUCT_DOESNOTEXIST">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="QUANTY_DOESNOTEXIST">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="TAX_DOESNOTEXIST">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="NUMBER_INVOICE_DOESNOTEXIST">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="NEGATIVE_FIRST_PRODUCT">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="EXIST_SHOPPING">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="SUCCESS_SHOPPING">Click me</button>
+
+{% endblock %}
+{% block script %}
+<script src="{% static 'jquery.tabletojson.min.js' %}"></script>
+<script src="https://unpkg.com/quagga@0.12.1/dist/quagga.min.js"></script>
+<script>
+	product= null;
+	code = null;
+	register = 0;
+	var t = null;
+	function Search_Product(code){
+		$.ajax({
+			url:"{% url 'Get_Product' %}",
+			data:{'code':code},
+			success:function(data){
+				obj = JSON.parse(data)
+				console.log(obj)
+				if($.isEmptyObject(obj)){
+					$("#PRODUCT_DOESNOTEXIST").click()
+				}
+				else{
+
+					$(".name_product").val(obj['name'])
+					$(".cost").val(obj['cost'])
+					$(".tax").val(obj['tax'])
+					$(".quanty").val('')
+					$(".price_1").val(obj['price_1'])
+					$(".price_2").val(obj['price_2'])
+					$(".price_3").val(obj['price_3'])
+					$(".price_4").val(obj['price_4'])
+					$(".price_5").val(obj['price_5'])
+					$(".cost").focus()
+					$(".cost").val('')
+					product = obj
+					code = code
+				}
+			}
+		})
+	}
+
+	document.addEventListener("DOMContentLoaded", () => {
+		const $resultados = document.querySelector("#resultado");
+		Quagga.init({
+			inputStream: {
+				constraints: {
+					width: 3500,
+					height: 3500,
+				},
+				name: "Live",
+				type: "LiveStream",
+				target: document.querySelector('#contenedor'), // Pasar el elemento del DOM
+			},
+			decoder: {
+				readers: ["ean_reader"]
+			}
+		}, function (err) {
+			if (err) {
+				console.log(err);
+				return
+			}
+			console.log("Iniciado correctamente");
+			Quagga.start();
+		});
+		Quagga.onDetected((data) => {
+			result = data.codeResult.code
+			console.log(result);
+			Search_Product(result)
+			$(".code_product").val(result)
+			$(".close_modal_code_bars").click()
+		});
+		Quagga.onProcessed(function (result) {
+			var drawingCtx = Quagga.canvas.ctx.overlay,
+				drawingCanvas = Quagga.canvas.dom.overlay;
+			if (result) {
+				if (result.boxes) {
+					drawingCtx.clearRect(0, 0, parseInt(drawingCanvas.getAttribute("width")), parseInt(drawingCanvas.getAttribute("height")));
+					result.boxes.filter(function (box) {
+						return box !== result.box;
+					}).forEach(function (box) {
+						Quagga.ImageDebug.drawPath(box, { x: 0, y: 1 }, drawingCtx, { color: "green", lineWidth: 2 });
+					});
+				}
+				if (result.box) {
+					Quagga.ImageDebug.drawPath(result.box, { x: 0, y: 1 }, drawingCtx, { color: "#00F", lineWidth: 2 });
+				}
+				if (result.codeResult && result.codeResult.code) {
+					Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 3 });
+				}
+			}
+		});
+	});
+
+	$(document).ready(function () {
+
+		invoice_number = null;
+
+		let items = JSON.parse(localStorage.getItem('items'))
+
+		$(".code_bars").click(function(){
+			$(".modal_scanner_cod_bars").click()
+		})
+
+		$(".code_product").keyup(function(e){
+			var code = (e.keyCode ? e.keyCode : e.which);
+	        if(code==13){
+	           Search_Product($(".code_product").val())
+	        }
+		})
+
+		$(".quanty").keyup(function(e){
+			var code = (e.keyCode ? e.keyCode : e.which);
+	        if(code==13){
+	        	tax = $(".tax").val()
+				if(parseInt($(".quanty").val()) != 0){
+					if(parseInt($(".tax").val()) == 0 || parseInt($(".tax").val()) == 5 || parseInt($(".tax").val()) == 19){
+						if($(".invoice_number").val() != ""){
+							doesnotexist($(".code_product").val())
+						}
+						else{
+							$("#NUMBER_INVOICE_DOESNOTEXIST").click()
+						}
+					}
+					else{
+						$("#TAX_DOESNOTEXIST").click()
+					}
+				}
+				else{
+					$("#QUANTY_DOESNOTEXIST").click()
+				}
+	        }
+	        else if(code == 67){
+	        	$(".code_product").focus()
+	        }
+		})
+
+		$(".code_product").change(function() {
+			Search_Product($(".code_product").val())
+		})
+
+		t = $('#table_shopping_example').DataTable({
+			destroy:true,
+			scrollCollapse: true,
+			autoWidth: false,
+			responsive: true,
+			columnDefs: [{
+				targets: "datatable-nosort",
+				orderable: false,
+			}],
+			"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+			"language": {
+				"info": "_START_-_END_ de _TOTAL_ Clientes",
+				searchPlaceholder: "Buscar cliente",
+				paginate: {
+					next: '<i class="ion-chevron-right"></i>',
+					previous: '<i class="ion-chevron-left"></i>'
+				}
+			}
+		});
+
+		function doesnotexist(code_product_doesnotexist){
+			var filas = $(".father").find("tr");
+			exist = false
+			for(i=0; i<filas.length; i++){
+				var celdas = $(filas[i]).find("td");
+				if($(celdas[0]).text() == code_product_doesnotexist){
+					exist = true
+					quanty = ($(".quanty").val() != "") ? parseInt($(celdas[2]).text()) + parseInt($(".quanty").val()): 0
+					if(quanty <= 0){
+						$("#"+code_product_doesnotexist).click()
+						$('.quanty').val(0)
+					}
+					else{
+
+						$(celdas[2]).text(quanty)
+					}
+				}
+			}
+
+			if(!exist){
+				if(parseInt($(".quanty").val()) > 0){
+					if(invoice_number){
+						$("#EXIST_SHOPPING").click()
+					}
+					else{
+						add_product_to_table()
+					}
+
+				}
+				else{
+					$("#NEGATIVE_FIRST_PRODUCT").click()
+					time_sleep()
+				}
+			}
+			exist = false
+			data_table = JSON.stringify($("#table_shopping_example").tableToJSON())
+			localStorage.setItem('items', data_table)
+			$(".quanty").focus()
+			$(".quanty").val('')
+		}
+
+		$(".add_product_to_list").click(function(){
+			tax = $(".tax").val()
+			if(parseInt($(".quanty").val()) != 0){
+				if(parseInt($(".tax").val()) == 0 || parseInt($(".tax").val()) == 5 || parseInt($(".tax").val()) == 19){
+					if($(".invoice_number").val() != ""){
+						doesnotexist($(".code_product").val())
+					}
+					else{
+						$("#NUMBER_INVOICE_DOESNOTEXIST").click()
+					}
+				}
+				else{
+					$("#TAX_DOESNOTEXIST").click()
+				}
+			}
+			else{
+				$("#QUANTY_DOESNOTEXIST").click()
+			}
+		})
+
+		function add_product_to_table(){
+			console.log(product+' Lista')
+			t.row.add([
+				$('.code_product').val(), product['name'], $('.quanty').val(), $('.cost').val(), $('.tax').val(),
+					$('.price_1').val(), $('.price_2').val(), $('.price_3').val(), $('.price_4').val(), $('.price_5').val(),`<button class="btn btn-primary delete_product" id="${$(".code_product").val()}"><i class="dw dw-delete-3"></button>`
+				]).draw(false);
+		}
+
+		t.on('click', '.delete_product', function() {
+			id = this.id
+			let $tr = $(this).closest('tr');
+			t.row($tr).remove().draw(false);
+			var filas = $(".father").find("tr");
+			exist = false
+			for(i=0; i<filas.length; i++){
+				var celdas = $(filas[i]).find("td");
+				if($(celdas[0]).text() == "No hay datos disponibles en la tabla"){
+					localStorage.removeItem('items');
+					break
+				}
+				else{
+					data_table = JSON.stringify($("#table_shopping_example").tableToJSON())
+					localStorage.setItem('items', data_table)
+					break
+				}
+
+			}
+		});
+
+		$(".save_shopping").click(function(){
+			data_table = JSON.stringify($("#table_shopping_example").tableToJSON())
+			$("#REGISTRAMOSCLIENTE").click()
+			$.ajax({
+				url:"{% url 'Save_Shopping' %}",
+				data:data_table,
+				success:function(data){
+					if(data == "True"){
+						$('#SUCCESS_SHOPPING').click()
+						time_sleep_success_shopping()
+					}
+				}
+			})
+		})
+
+
+
+		if(!$.isEmptyObject(items)){
+			console.log(items)
+			for(let i = 0;i < items.length; i++){
+				console.log(items[i]['CANTIDAD'])
+				t.row.add([
+				items[i]['CODIGO'], items[i]['DESCRIPCION'], items[i]['CANTIDAD'], items[i]['COSTO'], items[i]['IVA'],
+					items[i]['P1'], items[i]['P2'], items[i]['P3'], items[i]['P4'], items[i]['P5'],`<button class="btn btn-primary delete_product" id="${items[i]['CODIGO']}"><i class="dw dw-delete-3"></button>`
+				]).draw(false);
+			}
+		}
+
+		$(".invoice_number").change(function() {
+			invoice_number = $(".invoice_number").val()
+			$.ajax({
+				url:"{% url 'QUERY_SHOPPINGS' %}",
+				data:{'invoice_number':invoice_number},
+				success:function(data){
+					console.log(data)
+					if(data == "True"){
+						invoice_number = true
+						$("#EXIST_SHOPPING").click()
+					}
+					else{
+						invoice_number = false
+					}
+				}
+			})
+		})
+
+		$(".invoice_number").keyup(function(e) {
+			var code = (e.keyCode ? e.keyCode : e.which);
+	        if(code==13){
+				invoice_number = $(".invoice_number").val()
+				$.ajax({
+					url:"{% url 'QUERY_SHOPPINGS' %}",
+					data:{'invoice_number':invoice_number},
+					success:function(data){
+						console.log(data)
+						if(data == "True"){
+							invoice_number = true
+							$("#EXIST_SHOPPING").click()
+						}
+						else{
+							invoice_number = false
+						}
+					}
+				})
+			}
+		})
+
+
+
+	})
+
+	function sleep_succes(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function time_sleep_success_shopping() {
+        for (let i = 0; i < 2; i++) {
+            console.log(`Waiting ${i} seconds...`);
+            await sleep_succes(i * 1000);
+        }
+        localStorage.removeItem('items');
+		t.clear().draw();
+		$("select").each(function() { this.selectedIndex = 0 });
+		$("input[type=text]").each(function() { this.value = '' });
+		$("input[type=number]").each(function() { this.value = '' });
+		$(".invoice_number").focus()
+    }
+
+
+	function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function time_sleep() {
+        for (let i = 0; i < 2.5; i++) {
+            console.log(`Waiting ${i} seconds...`);
+            await sleep(i * 1000);
+        }
+        $(".quanty").focus()
+    }
+
+
+</script>
+{% endblock %}
+

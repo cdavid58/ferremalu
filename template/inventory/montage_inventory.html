@@ -1,0 +1,182 @@
+{% extends '../base.html' %}
+{% load static %}
+{% block content %}
+<style>
+	input[type="file"] {
+		display: none;
+	}
+	.custom-file-upload {
+	    border: 1px solid #ccc;
+	    display: inline-block;
+	    padding: 6px 12px;
+	    cursor: pointer;
+	}
+
+</style>
+<div class="card-box mb-30">
+	<div class="pd-20">
+		<div class="row">
+			<div class="col-6">
+				<label class="custom-file-upload">
+					<input type="file" id="fileUpload" accept=".xls,.xlsx"/>
+					Subir Documento
+				</label>
+			</div>
+			<div class="col-6 text-right">
+				<label class="custom-file-upload mr-3">
+					<a  download="inventario.xlsx" href="{% static 'inventario.xlsx' %}">Descargar Patron</a>
+				</label>
+				<label class="custom-file-upload">
+					<a href="{% url 'List_Inventory' %}">Lista de inventario</a>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="card-box mb-30" >
+	<div class="pd-20">
+		<h4 class="text-blue h4">Inventario</h4>
+	</div>
+	<div class="pb-20">
+		<table id="father" class="table stripe hover nowrap">
+			<thead>
+				<tr>
+					<th>CODIGO</th>
+					<th>DESCRIPCION</th>
+					<th style="width: 10px;">CANTIDAD</th>
+					<th style="width: 10px;">COSTO</th>
+					<th style="width: 10px;">IVA</th>
+					<th style="width: 10px;">P1</th>
+					<th style="width: 10px;">P2</th>
+					<th style="width: 10px;">P3</th>
+					<th style="width: 10px;">P4</th>
+					<th style="width: 10px;">P5</th>
+				</tr>
+			</thead>
+			<tbody class="father">
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<div class="card-box mb-30" >
+	<div class="pd-20">
+		<button type="button" class="btn btn-primary col-12 save_inventory">Grabar inventario</button>
+	</div>
+</div>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="DOCUMENT_ERROR_XLSX">Click me</button>
+
+<!-- Button trigger modal -->
+<button type="button" hidden class="btn btn-primary loader" data-toggle="modal" data-target="#staticBackdrop">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Cargando</h5>
+        <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"> -->
+          <!-- <span aria-hidden="true">&times;</span>
+        </button> -->
+      </div>
+      <div class="modal-body">
+        ENVIANDO DATOS...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary close_modal" hidden data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+{% block script %}
+	<script src="{% static 'jquery.tabletojson.min.js' %}"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.3/xlsx.full.min.js"></script>
+	<script>
+		let data_inventory;
+		$(document).ready(function(){
+			
+			t = $('#father').DataTable({
+	    		destroy:true,
+	    		scrollCollapse: true,
+				autoWidth: false,
+				responsive: true,
+				columnDefs: [{
+					targets: "datatable-nosort",
+					orderable: false,
+				}],
+				"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+				"language": {
+					"info": "_START_-_END_ de _TOTAL_ Facturas",
+					searchPlaceholder: "Buscar factura",
+					paginate: {
+						next: '<i class="ion-chevron-right"></i>',
+						previous: '<i class="ion-chevron-left"></i>'  
+					}
+				}
+	    	})
+			// $("#DOCUMENT_ERROR_XLSX").click()
+
+			n = 0
+			
+			var selectedFile;
+	        document
+	          .getElementById("fileUpload")
+	          .addEventListener("change", function(event) {
+	            selectedFile = event.target.files[0];
+	            var fileReader = new FileReader();
+	              fileReader.onload = function(event) {
+	                var data = event.target.result;
+	    
+	                var workbook = XLSX.read(data, {
+	                  type: "binary"
+	                });
+	                workbook.SheetNames.forEach(sheet => {
+	                  let rowObject = XLSX.utils.sheet_to_row_object_array(
+	                    workbook.Sheets[sheet]
+	                  );
+	                  jsonObject = JSON.parse(JSON.stringify(rowObject))
+	                  if(n == 0){
+	                  	data_inventory = jsonObject
+	                  	console.log(data_inventory)
+	                  	n += 1
+	                  }
+	                  for(var i = 0; i < jsonObject.length; i++){
+	                  	t.row.add([
+	                  		jsonObject[i].CODIGO, jsonObject[i].PRODUCTO,jsonObject[i].CANTIDAD,
+	                  		jsonObject[i].IVA,jsonObject[i].COSTO,jsonObject[i].PRECIO1,
+	                  		jsonObject[i].PRECIO2,jsonObject[i].PRECIO3,jsonObject[i].PRECIO4,
+	                  		jsonObject[i].PRECIO5
+	                  	]).draw(false);
+	                  }
+	                });
+	              };
+	              fileReader.readAsBinaryString(selectedFile);
+	          });
+
+	        $(".save_inventory").click(function(){
+	        	$(".loader").click()
+	        	$.ajax({
+	        		url:"{% url 'Montage_Inventory' %}",
+	        		type:"POST",
+							data:{"data_inventory":JSON.stringify(data_inventory),csrfmiddlewaretoken: '{{ csrf_token }}'},
+							complete:function(data){
+								console.log("Terminado")
+								$(".close_modal").click()
+								location.reload(true)
+							},
+							success:function(data){
+									console.log(data)
+							}
+
+						})
+	        })
+		})
+	</script>
+{% endblock %}

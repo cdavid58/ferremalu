@@ -1,0 +1,46 @@
+[
+    {
+        "pk": 1,
+        "name": "Registro civil"
+    },
+    {
+        "pk": 2,
+        "name": "Tarjeta de identidad"
+    },
+    {
+        "pk": 3,
+        "name": "Cédula de ciudadanía"
+    },
+    {
+        "pk": 4,
+        "name": "Tarjeta de extranjería"
+    },
+    {
+        "pk": 5,
+        "name": "Cédula de extranjería"
+    },
+    {
+        "pk": 6,
+        "name": "NIT"
+    },
+    {
+        "pk": 7,
+        "name": "Pasaporte"
+    },
+    {
+        "pk": 8,
+        "name": "Documento de identificación extranjero"
+    },
+    {
+        "pk": 9,
+        "name": "NIT de otro país"
+    },
+    {
+        "pk": 10,
+        "name": "NUIP *"
+    },
+    {
+        "pk": 11,
+        "name": "PEP"
+    }
+]

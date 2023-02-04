@@ -1,0 +1,136 @@
+{% extends '../base.html' %}
+{% block loading %}Estamos cargando tu factura...{% endblock %}
+{% block content %}
+<div class="min-height-200px" style="width: 100% !important;">
+	<div class="invoice-wrap" style="width: 100% !important;">
+		<div class="invoice-box" style="width: 100% !important;">
+			<div class="invoice-header">
+				<div class="logo text-center">
+					<img src="vendors/images/deskapp-logo.png" alt="">
+				</div>
+			</div>
+			<h4 class="text-center mb-30 weight-600">Factura {{type_invoice}} N° {{information.consecutive}}</h4>
+			<div class="row pb-30">
+				<div class="col-md-6 col-12">
+					<h5 class="mb-15">{{client.name}}</h5>
+					<p class="font-14 mb-5"><a href="#"><strong class="weight-600">Tlf: {% if client.phone %}{{client.phone}}{% else %}no tiene regis.{% endif %}</strong></a></p>
+					<p class="font-14 mb-5"><a href="#"><strong class="weight-600">Email: {% if client.email %}{{client.email}}{% else %}no tiene regis.{% endif %}</strong></a></p>
+					<p class="font-14 mb-5"><a href="#"><strong class="weight-600">Direccion: {% if client.address %}{{client.address}}{% else %}no tiene regis.{% endif %}</strong></a></p>
+				</div>
+				<div class="col-md-6 col-12">
+					<div class="text-right">
+						<p class="font-14 mb-5">Fecha: {{information.date}} </strong></p>
+						<p class="font-14 mb-5">Fecha de vencimiento: {{information.date_expired}} </strong></p>
+						<p class="font-14 mb-5">Forma de Pago: {{information.payment_form}}</p>
+						<p class="font-14 mb-5">Dias de Venc: {{days_expired}}</p>
+						<p class="font-14 mb-5"></p>
+					</div>
+				</div>
+			</div>
+			<div class="pd-20 card-box mb-30 table-responsive">
+				<table class="table" id="father">
+					<thead>
+						<tr>
+							<th>DESCRIPCION</th>
+							<th>CANTIDAD</th>
+							<th>VAL. UNIT</th>
+							<th>IVA</th>
+							<th>VAL. IVA</th>
+							<th>DESC.</th>
+							<th>VAL. DESC.</th>
+							<th>SUBTOTAL</th>
+						</tr>
+					</thead>
+					<tbody class="father">
+						{% for i in details_product %}
+							<tr>
+								<td>
+									{{i.description}}
+								</td>
+								<td>
+									{{i.quanty}}
+								</td>
+								<td>
+									{{i.price_base|floatformat:2}}
+								</td>
+								<td>
+									{{i.tax}}
+								</td>
+								<td>
+									{{i.val_tax|floatformat:2}}
+								</td>
+								<td>
+									{{i.discount}}
+								</td>
+								<td>
+									{{i.discount_product|floatformat:2}}
+								</td>
+								<td>
+									{{i.subtotal|floatformat:2}}
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<div class="row">
+				<div class="pd-20 mb-30 col-sm-5 col-12">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>IMPUESTO</th>
+								<th>%</th>
+								<th>VALOR</th>
+								<th>BASE</th>
+								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>IVA</td>
+								<td>19%</td>
+								<td style="text-align: right;">$ {{iva19.19|floatformat:2}}</td>
+								<td style="text-align: right;">$ {{iva19.base|floatformat:2}}</td>
+							</tr>
+							<tr>
+								<td>IVA</td>
+								<td>5%</td>
+								<td style="text-align: right;">$ {{iva5.5|floatformat:2}}</td>
+								<td style="text-align: right;">$ {{iva5.base|floatformat:2}}</td>
+							</tr>
+							<tr>
+								<td>IVA</td>
+								<td>0%</td>
+								<td style="text-align: right;">$ {{iva0.0|floatformat:2}}</td>
+								<td style="text-align: right;">$ {{iva0.base|floatformat:2}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="pd-20 mb-30 col-sm-3 col-12 ml-auto">
+					<table class="table">
+						<tbody>
+							<tr>
+								<td>SubTotal:</td>
+								<td style="text-align: right;">$ &nbsp;<span id="Subtotal_Invoice">{{subtotal_invoice}}</span></td>
+							</tr>
+							<tr>
+								<td>Descuento:</td>
+								<td style="text-align: right;">$ &nbsp;<span id="Neto_Invoice">0</span></td>
+							</tr>
+							<tr>
+								<td>Impuesto:</td>
+								<td style="text-align: right;">$ &nbsp;<span id="Tax_Invoice">{{tax_invoice}}</span></td>
+							</tr>
+							<tr>
+								<td>Total:</td>
+								<td style="text-align: right;">$ &nbsp;<span id="Totals_Invoice">{{total}}</span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

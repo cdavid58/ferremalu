@@ -1,0 +1,146 @@
+{% extends '../base.html' %}
+{% block loading %}Estamos cargando la lista de empleados{% endblock %}
+{% block content %}
+
+<div class="page-header">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<div class="title">
+				<h4>Listado de empleados</h4>
+			</div>
+		</div>
+		{% if request.session.type_employee == 1 %}
+			<div class="col-md-6 col-sm-12 text-right">
+				<a class="btn btn-primary add_employee" href="#" role="button">
+					Agregar Empleado
+				</a>
+			</div>
+		{% endif %}
+	</div>
+</div>
+<div class="card-box mb-30">
+	<div class="pd-20">
+		<h4 class="text-blue h4"></h4>
+	</div>
+	<div class="pb-20">
+		<table id="add_to_table_employee" class="table stripe hover nowrap">
+			<thead>
+				<tr>
+					<th class="table-plus datatable-nosort" style="width: 10%;">Doc. I</th>
+					<th style="width: 25%;">Nombre</th>
+					<th style="width: 7%;">Teléfono</th>
+					<th style="width: 25%;">Tipo de Empleado</th>
+					{% if request.session.type_employee == 1 %}<th class="datatable-nosort" style="width: 10%;">Action</th>{% endif %}
+				</tr>
+			</thead>
+			<tbody class="father"></tbody>
+		</table>
+	</div>
+</div>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="DELETED_EMPLOYEE_SUCCESS">Click me</button>
+{% endblock %}
+{% block script %}
+
+<script>
+	function Add_Table_Employee(){
+		url = '{{json}}'
+		$.get(url, function(data) {
+	        var content = data;
+	        console.log(content)
+	        var type_employee = parseInt('{{request.session.type_employee}}')
+	        for(var i = 0; i < content.length; i++){
+	        	$(".father").append(`
+	        		<tr id="myRow${content[i].pk}">
+						<td class="table-plus">${content[i].documentI}</td>
+						<td>${content[i].name}</td>
+						<td>${content[i].phone}</td>
+						<td>
+							<span>${(content[i].type_employee == 1) ? "Administrador" : "Cajero "}</span>
+						</td>
+						${
+							( type_employee == 1 )?
+							`<td>
+									<div class="dropdown">
+										<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+											<i class="dw dw-more"></i>
+										</a>
+										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+											<a clasas="dropdown-item" href="http://localhost:8000/Edit/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
+											<a class="dropdown-item delete_employee" id="${content[i].pk}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
+										</div>
+									</div>
+							</td>`:""
+						}
+					</tr>
+	        	`)
+
+	        	t.row.add([
+					content[i].documentI, content[i].name, content[i].phone, `<span>${(content[i].type_employee == 1) ? "Administrador" : "Cajero "}</span>`,
+					`
+					${(type_employee == 1) ? 
+							`<td>
+								<div class="dropdown">
+									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+										<i class="dw dw-more"></i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+										<a class="dropdown-item" href="http://localhost:8000/Edit/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
+										<a class="dropdown-item delete_employee" id="${content[i]['code']}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
+									</div>
+								</div>
+							</td>
+							`:''
+						}
+					`
+				]).draw(false);
+	        }
+	    })
+	}
+
+    $(document).ready(function(){
+
+    	t = $('#add_to_table_employee').DataTable({
+    		destroy:true,
+    		scrollCollapse: true,
+			autoWidth: false,
+			responsive: true,
+			columnDefs: [{
+				targets: "datatable-nosort",
+				orderable: false,
+			}],
+			"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+			"language": {
+				"info": "_START_-_END_ de _TOTAL_ Productos",
+				searchPlaceholder: "Buscar producto",
+				paginate: {
+					next: '<i class="ion-chevron-right"></i>',
+					previous: '<i class="ion-chevron-left"></i>'  
+				}
+			}
+    	})
+
+    	Add_Table_Employee()
+
+
+
+
+    	$(".add_employee").click(function() {
+    		location.href = "{% url 'CREATE_EMPLOYEE' %}"
+    	})
+
+    	t.on('click', '.delete_employee', function() {
+			id = this.id
+			tr = $(this).closest('tr');
+			t.row(tr).remove().draw(false);
+    		$.ajax({
+    			url:"{% url 'DELETE_EMPLOYEE' %}",
+    			data:{'pk':id},
+    			success:function(data){
+    				$("#DELETED_EMPLOYEE_SUCCESS").click()
+    			}
+    		})
+    	})
+    })
+</script>
+
+{% endblock %}

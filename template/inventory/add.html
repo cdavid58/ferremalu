@@ -1,0 +1,198 @@
+{% extends '../base.html' %}
+{% block loading %}Agreguemos un producto{% endblock %}
+{% block content %}
+
+<div class="alert_register_2"></div>
+<div class="alert alert-primary alert-dismissible fade show alert_register" hidden role="alert">
+	<strong>Producto Registrado Exitosamente!.</strong>
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+		<span aria-hidden="true">×</span>
+	</button>
+</div>
+<div class="pd-20 card-box mb-30">
+	<div class="clearfix">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Agregar Producto</h4>
+		</div>
+		<!-- <div class="pull-right">
+			<button type="button" data-toggle="modal" data-target="#Medium-modal" class="btn btn-primary">Registrar Proveedor</button>
+		</div> -->
+	</div>
+	<form class="form_data_product">
+		<br>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Código</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="code" class="form-control docI" type="text" autofocus>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Nombre del Producto</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="name" class="form-control" type="text" placeholder="Harina Pan">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Cantidad</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="quanty" class="form-control text-right" value="0" type="number">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">IVA</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="tax" class="form-control text-right" value="0" type="number">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Costo</label>
+					<input type="number" name="cost" value="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 1</label>
+					<input type="number" name="price_1" value="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 2</label>
+					<input type="number" name="price_2" value="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 3</label>
+					<input type="number" name="price_3" value="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 4</label>
+					<input type="number" name="price_4" value="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 5</label>
+					<input type="number" name="price_5" value="0" class="form-control text-right">
+				</div>
+			</div>
+		</div>
+		<!-- <div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Proveedor</label>
+			<div class="col-sm-12 col-md-10">
+				<select name="supplier" class="custom-select col-12 document">
+					<option selected="" value="1">Cambiar...</option>
+					{% for i in Type_DocumentI %}
+						<option value="{{i.pk}}">{{i.name}}</option>
+					{% endfor %}
+				</select>
+			</div>
+		</div> -->
+		<div class="row">
+			<button type="button" class="btn btn-primary register_product">Registrar producto</button>
+			<a type="button" href="{% url 'List_Inventory' %}" class="btn btn-primary col-xs-12 register_client ml-auto">Lista de producto</a>
+		</div>
+	</form>
+</div>
+
+
+<div class="modal fade" id="Medium-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title" id="myLargeModalLabel">Registro proveedor</h4>
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			</div>
+			<div class="modal-body">
+				<form id="register_seller">
+					<div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label">NIT</label>
+						<div class="col-sm-12 col-md-10">
+							<input name="code" class="form-control docI" type="text">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label">Nombre</label>
+						<div class="col-sm-12 col-md-10">
+							<input name="code" class="form-control docI" type="text">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label">Teléfono</label>
+						<div class="col-sm-12 col-md-10">
+							<input name="code" class="form-control docI" type="text">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label">Email</label>
+						<div class="col-sm-12 col-md-10">
+							<input name="code" class="form-control docI" type="email">
+						</div>
+					</div>
+					<div class="form-group row">
+						<label class="col-sm-12 col-md-2 col-form-label">Dirección</label>
+						<div class="col-sm-12 col-md-10">
+							<input name="code" class="form-control docI" type="text">
+						</div>
+					</div>
+
+				</form>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+				<button type="button" class="btn btn-primary">Registrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="PRODUCT_SAVE_SUCCESS"></button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="PRODUCT_SAVE_ERROR"></button>
+{% endblock %}
+{% block script %}
+
+<script>
+	function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function time_sleep() {
+        for (let i = 0; i < 2; i++) {
+            console.log(`Waiting ${i} seconds...`);
+            await sleep(i * 1000);
+        }
+        $("form input[type=text]").each(function() { this.value = '' });
+		$("form input[type=number]").each(function() { this.value = '0' });
+		$('html, body').animate({
+			scrollTop: $(".alert_register_2").offset().top
+		}, 1000);
+		$(".docI").focus()
+    }
+	$(document).ready(function() {
+		$(".register_product").click(function(){
+			$("#REGISTRAMOSCLIENTE").click()
+			$.ajax({
+				url:"{% url 'Save_Product' %}",
+				data:$(".form_data_product").serialize(),
+				success:function(data){
+					if(data == "True"){
+						$("#PRODUCT_SAVE_SUCCESS").click()
+						time_sleep()
+     					
+					}					
+					else{
+						$("#PRODUCT_SAVE_ERROR").click()
+					}
+				}
+			})
+		})
+	})
+</script>
+
+{% endblock %}

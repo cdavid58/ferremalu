@@ -1,0 +1,105 @@
+{% extends '../base.html' %}
+{% block loading %}Editemos un producto{% endblock %}
+{% block content %}
+<div class="pd-20 card-box mb-30">
+	<div class="clearfix">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Editar Producto</h4>
+		</div>
+	</div>
+	<form class="form_data_product">
+		<br>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Código</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="code_product" class="form-control docI" disabled value="{{p.code}}" type="text">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Nombre del Producto</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="name" class="form-control" type="text" value="{{p.name}}" autofocus>
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Cantidad</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="quanty" class="form-control" value="{{p.quanty}}" type="number">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">IVA</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="tax" class="form-control" value="{{p.tax}}" type="number">
+			</div>
+		</div>
+
+		<div class="form-group row">
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Costo</label>
+					<input type="text" name="cost" value="{{p.cost}}" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 1</label>
+					<input type="text" name="price_1" value="{{p.price_1}}" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 2</label>
+					<input type="text" name="price_2" value="{{p.price_2}}" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 3</label>
+					<input type="text" name="price_3" value="{{p.price_3}}" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 4</label>
+					<input type="text" name="price_4" value="{{p.price_4}}" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-2 col-sm-12">
+				<div class="form-group">
+					<label>Precio 5</label>
+					<input type="text" name="price_5" value="{{p.price_5}}" class="form-control text-right">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<button type="button" class="btn btn-primary register_product">Actualizar producto</button>
+			<a type="button" href="{% url 'List_Inventory' %}" class="btn btn-primary col-xs-12 register_client ml-auto">Lista de producto</a>
+		</div>
+	</form>
+</div>
+
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="UPDATE_PRODUCT_ERROR"></button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="UPDATE_PRODUCT"></button>
+{% endblock %}
+{% block script %}
+	<script>
+		$(document).ready(function() {
+			$(".register_product").click(function(){
+				$("#REGISTRAMOSCLIENTE").click()
+				$.ajax({
+					url:"{% url 'UPDATED_PRODUCT' %}",
+					data:$(".form_data_product").serialize(),
+					success:function(data){
+						if(data == "True"){
+							$("#UPDATE_PRODUCT").click()
+						}
+						else{
+							$("#UPDATE_PRODUCT_ERROR").click()
+						}
+					}
+				})
+			})
+		})
+	</script>
+{% endblock %}

@@ -1,0 +1,37 @@
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /client/GET_LIST_CLIENT/ HTTP/1.1" 200 116
+WARNING:django.request:Not Found: /client/List_Client/vendors/images/github.svg
+WARNING:django.request:Not Found: /client/List_Client/vendors/images/github.svg
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /client/GET_CLIENT/ HTTP/1.1" 200 423
+DEBUG:chardet.charsetprober:EUC-TW Taiwan prober hit error at byte 381
+DEBUG:chardet.charsetprober:utf-8  confidence = 0.505
+DEBUG:chardet.charsetprober:SHIFT_JIS Japanese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-JP Japanese confidence = 0.01
+DEBUG:chardet.charsetprober:GB2312 Chinese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-KR Korean confidence = 0.01
+DEBUG:chardet.charsetprober:CP949 Korean confidence = 0.01
+DEBUG:chardet.charsetprober:Big5 Chinese confidence = 0.01
+DEBUG:chardet.charsetprober:EUC-TW not active
+DEBUG:chardet.charsetprober:windows-1251 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:KOI8-R Russian confidence = 0.01
+DEBUG:chardet.charsetprober:ISO-8859-5 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:MacCyrillic Russian confidence = 0.01
+DEBUG:chardet.charsetprober:IBM866 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:IBM855 Russian confidence = 0.01
+DEBUG:chardet.charsetprober:ISO-8859-7 Greek confidence = 0.01
+DEBUG:chardet.charsetprober:windows-1253 Greek confidence = 0.01
+DEBUG:chardet.charsetprober:ISO-8859-5 Bulgairan confidence = 0.0
+DEBUG:chardet.charsetprober:windows-1251 Bulgarian confidence = 0.0
+DEBUG:chardet.charsetprober:TIS-620 Thai confidence = 0.0
+DEBUG:chardet.charsetprober:ISO-8859-9 Turkish confidence = 0.48966199954189366
+DEBUG:chardet.charsetprober:windows-1255 Hebrew confidence = 0.0
+DEBUG:chardet.charsetprober:windows-1255 Hebrew confidence = 0.0
+DEBUG:chardet.charsetprober:windows-1255 Hebrew confidence = 0.0
+WARNING:django.request:Not Found: /client/Edit_Client/31/vendors/images/github.svg
+DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
+DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /client/EDIT_CLIENT/ HTTP/1.1" 200 53
+WARNING:django.request:Not Found: /client/List_Client/vendors/images/github.svg
+WARNING:django.request:Not Found: /client/List_Client/vendors/images/github.svg
+INFO:django.utils.autoreload:C:\Users\David\Videos\Proyectos_Facturacion\local\Proyectos\listo reportes\facturacion\client\views.py changed, reloading.
+DEBUG:asyncio:Using proactor: IocpProactor

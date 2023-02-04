@@ -1,0 +1,10 @@
+[
+    {
+        "pk": 1,
+        "name": "Responsable de IVA"
+    },
+    {
+        "pk": 2,
+        "name": "No Responsable de IVA"
+    }
+]

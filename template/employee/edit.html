@@ -1,0 +1,89 @@
+{% extends '../base.html' %}
+{% block loading %}Editemos a un empleado{% endblock %}
+{% block content %}
+<div class="pd-20 card-box mb-30">
+	<div class="clearfix">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Editar Empleado</h4>
+		</div>
+	</div>
+	<form class="form_data_product">
+		<div class="form-group row">
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Doc. Identidad</label>
+					<input type="text" name="documentI" value="{{e.documentI}}" class="form-control" autofocus>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Nombre</label>
+					<input type="text" name="name" value="{{e.name}}" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Teléfono</label>
+					<input type="text" name="phone" value="{{e.phone}}" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Correo Electrónico</label>
+					<input type="text" name="email" value="{{e.email}}" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Usuario</label>
+					<input type="text" name="user" value="{{e.user}}" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Contraseña</label>
+					<input type="text" name="psswd" value="{{e.psswd}}" class="form-control">
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<div class="form-group">
+					<label>Contraseña</label>
+					<select name="type_employee" class="custom-select col-12">
+						{% if request.session.type_employee == 1 %}
+							<option value="1">Administrador</option>
+							<option value="2">Cajero</option>
+						{% else %}
+							<option value="2">Cajero</option>
+							<option value="1">Administrador</option>
+						{% endif %}
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<button type="button" class="btn btn-primary register_product">Actualizar información</button>
+			<a type="button" href="{% url 'GET_LIST_EMPLOYEE' %}" class="btn btn-primary col-xs-12 register_client ml-auto">Lista de empleados</a>
+		</div>
+	</form>
+</div>
+
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="UPDATE_EMPLOYEE"></button>
+{% endblock %}
+{% block script %}
+	<script>
+		$(document).ready(function() {
+			$(".register_product").click(function(){
+				$("#REGISTRAMOSCLIENTE").click()
+				$.ajax({
+					url:"{% url 'UPDATED_EMPLOYEE' %}",
+					data:$(".form_data_product").serialize(),
+					success:function(data){
+						if(data == "True"){
+							$("#UPDATE_EMPLOYEE").click()
+						}
+					}
+				})
+			})
+		})
+	</script>
+{% endblock %}

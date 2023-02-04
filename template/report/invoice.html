@@ -1,0 +1,109 @@
+{% extends '../base.html' %}
+{% block content %}
+<div class="card-box mb-30">
+	<div class="pd-20">
+		<h4 class="text-blue h4">Todas las Facturas</h4>
+	</div>
+	<div class="pb-20">
+		<table id="add_to_table_invoice" class="table stripe hover nowrap">
+			<thead>
+				<tr>
+					<th class="table-plus datatable-nosort" style="width: 10%;">Numero</th>
+					<th style="width: 25%;">Cliente</th>
+					<th style="width: 7%;">Fecha</th>
+					<th style="width: 25%;">Estado</th>
+					<th style="width: 15%;">Total</th>
+				</tr>
+			</thead>
+			<tbody class="father"></tbody>
+		</table>
+	</div>
+</div>
+
+<div class="pd-20 card-box mb-30 col-sm-3 col-12 ml-auto">
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>Total:</td>
+				<td style="text-align: right;">$ &nbsp;<span id="Totals_Invoice">0</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}
+{% block script %}
+
+	<script>
+
+		function Add_To_Table(){
+			url = '{{json}}'
+			$.get(url, function(data) {
+		        var content = data;
+		        console.log(data)
+		        var type_employee = parseInt('{{request.session.type_employee}}')
+		        var total = 0
+		        for(var i = 0; i < content.length; i++){
+		        	t.row.add([ content[i].consecutive, content[i].client , content[i].date, `<span id="state${content[i].consecutive}">${content[i].state}</span>`, content[i].total
+		        	]).draw(false);
+		        	total += parseFloat(content[i].total)
+		        }
+	            $("#Totals_Invoice").text(total);
+		    })
+		}
+
+
+
+		$(document).ready(function(){
+			t = $('#add_to_table_invoice').DataTable({
+	    		destroy:true,
+	    		scrollCollapse: true,
+				autoWidth: false,
+				responsive: true,
+				columnDefs: [{
+					targets: "datatable-nosort",
+					orderable: false,
+				}],
+				"lengthMenu": [[10, 25, 50, -1], [10, 25, 50, "All"]],
+				"language": {
+					"info": "_START_-_END_ de _TOTAL_ Factura",
+					searchPlaceholder: "Buscar Factura",
+					paginate: {
+						next: '<i class="ion-chevron-right"></i>',
+						previous: '<i class="ion-chevron-left"></i>'  
+					}
+				}
+	    	})
+
+	    	Add_To_Table()
+
+	    	function total(){
+	    		
+	    	}
+
+	    	total()
+
+
+	    	$(".busqueda").keyup(function(){
+	    		var filas = $(".father").find("tr");
+	            var resultado = "";
+	            var total = 0
+	            for(i=0; i<filas.length; i++){
+	                var celdas = $(filas[i]).find("td");
+	                if ($(celdas[4]).text().length > 0) {
+					    total += parseFloat($(celdas[4]).text())
+					}
+					else{
+						total = 0
+					}
+	            }
+	            $("#Totals_Invoice").text(total)
+	    	})
+
+
+
+
+		})
+	</script>
+
+{% endblock %}

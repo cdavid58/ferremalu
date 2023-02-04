@@ -1,0 +1,102 @@
+{% extends '../base.html' %}
+{% block loading %}Agreguemos un empleado{% endblock %}
+{% block content %}
+
+<div class="pd-20 card-box mb-30">
+	<div class="clearfix">
+		<div class="pull-left">
+			<h4 class="text-blue h4">Agregar empleado</h4>
+			<p class="mb-30">Todos los campos son obligatorios</p>
+		</div>
+	</div>
+	<form class="form_data_client">
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Doc. de Iden</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="docI" class="form-control docI" type="number" autofocus placeholder="9999999999">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Nombre</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="name" class="form-control" type="text" placeholder="Johnny Brown">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Email</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="email" class="form-control" placeholder ="email@example.com" type="email">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Teléfono</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="phone" class="form-control" placeholder ="301-570-0795" type="tel">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Usuario</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="user" class="form-control" placeholder ="nombre de usaurio" type="text">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Contraseña</label>
+			<div class="col-sm-12 col-md-10">
+				<input name="psswd" class="form-control" placeholder="************" type="password">
+			</div>
+		</div>
+		<div class="form-group row">
+			<label class="col-sm-12 col-md-2 col-form-label">Tipo de Empleado</label>
+			<div class="col-sm-12 col-md-10">
+				<select name="type_employee" class="custom-select col-12">
+					<option selected="">Cambiar...</option>
+					<option value="1">Administrador</option>
+					<option value="2">Empleado</option>
+				</select>
+			</div>
+		</div>
+		<div class="row">
+			<button type="button" class="btn btn-primary register_client">Registrar empleado</button>
+			<a type="button" href="{% url 'GET_LIST_EMPLOYEE' %}" class="btn btn-primary ml-auto">Lista de cliente</a>
+		</div>
+	</form>
+</div>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="SOLD_OUT">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="REGISTERED_EMPLOYEE">Click me</button>
+<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="REGISTERED_EMPLOYEE_SUCCESSS">Click me</button>
+{% endblock %}
+{% block script %}
+
+	<script>
+		$(document).ready(function(){
+			$(".register_client").click(function(){
+				$("#REGISTRAMOSCLIENTE").click()
+				$.ajax({
+					data:$(".form_data_client").serialize(),
+					success:function(data){
+						data = JSON.parse(data)
+						if(!data['Result']){
+							if(data['message'] == 'sold out'){
+								$("#SOLD_OUT").click()
+							}
+							else if(data['message'] == "already registered employee"){
+								$("#REGISTERED_EMPLOYEE").click()
+							}	
+						}
+						else{
+							$("form select").each(function() { this.selectedIndex = 0 });
+	     					$("form input[type=text]").each(function() { this.value = '' });
+	     					$("form input[type=number]").each(function() { this.value = '' });
+	     					$("form input[type=email]").each(function() { this.value = '' });
+	     					$("form input[type=password]").each(function() { this.value = '' });
+	     					$("form input[type=tel]").each(function() { this.value = '' });
+							$("#REGISTERED_EMPLOYEE_SUCCESSS").click()
+						}
+					}
+				})
+			})
+		})
+	</script>
+
+{% endblock %}
