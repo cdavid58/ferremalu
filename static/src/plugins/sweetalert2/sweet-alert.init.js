@@ -350,6 +350,19 @@
         });
 
 
+        $('#OUT_STOCK').click(function () {
+            swal(
+                {
+                    type: 'error',
+                    title: 'Oops',
+                    text: 'La cantidad que indico es mayor a la del stock',
+                    timer: 2400,
+                    showConfirmButton:false
+                }
+            )
+        });
+
+
 
 
 

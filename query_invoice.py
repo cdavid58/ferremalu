@@ -17,10 +17,10 @@ class Create_Invoice:
 		self.data = response.text
 		if json.loads(self.data)['result']:
 			Discount_Document(self.request)
-			if self.request.session['type_invoice'] == 1:
-				self.Save_Record_JSON(env.FILE_JSON_INVOICE_FE)		
-			else:
-				self.Save_Record_JSON(env.FILE_JSON_INVOICE_POS)	
+# 			if self.request.session['type_invoice'] == 1:
+# 				self.Save_Record_JSON(env.FILE_JSON_INVOICE_FE)		
+# 			else:
+# 				self.Save_Record_JSON(env.FILE_JSON_INVOICE_POS)	
 			return True
 		return False
 
@@ -50,7 +50,6 @@ class Create_Invoice:
 			json.dump(data, file, indent=4)
 		# if result
 		return result[0]
-		data[i]['cufe'] = result[1]
 
 
 
@@ -81,5 +80,39 @@ class Query_Invoice:
 		response = requests.request("POST", url, headers=headers, data=payload)
 		return json.loads(response.text)
 
+	def CREDITNOTE(self,consecutive,type_invoice):
+		url = env.CREDITNOTE
+		payload = json.dumps({
+		  "consecutive": 78,
+		  "type_invoice": 2
+		})
+		headers = {
+		  'Content-Type': 'application/json'
+		}
 
-	
+		response = requests.request("POST", url, headers=headers, data=payload)
+
+		return json.loads(response.text)['result']
+
+	def GetListCreditNote(self,type_invoice):
+		url = env.GET_LIST_NOTE_CREDIT
+		payload = json.dumps({"type": type_invoice})
+		headers = {'Content-Type': 'application/json'}
+		response = requests.request("POST", url, headers=headers, data=payload)
+		return json.loads(response.text)
+
+	def UPDATE_WALLET(self,consecutive,payment_form,pk_employee):
+		url = "https://apiferre.pythonanywhere.com/pos/Update_Wallet_POS/"
+		payload = json.dumps({
+		  "consecutive": consecutive,
+		  "payment_form": payment_form,
+		  "pk_employee": pk_employee
+		})
+		headers = {
+		  'Content-Type': 'application/json'
+		}
+		response = requests.request("POST", url, headers=headers, data=payload)
+		print(response.text)
+
+
+

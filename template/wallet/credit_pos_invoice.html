@@ -1,0 +1,81 @@
+{% extends '../base.html' %}
+{% block loading %}Estamos cargando tus facturas a crédito{% endblock %}
+{% block content %}
+<div class="card-box mb-30">
+	<div class="pd-20">
+		<h4 class="text-blue h4">Todas las facturas a crédito</h4>
+	</div>
+	<div class="pb-20">
+		<table id="add_to_table_invoice" class="table stripe hover nowrap">
+			<thead>
+				<tr>
+					<th class="table-plus datatable-nosort" style="width: 10%;">N° Factura</th>
+					<th style="width: 7%;">Cliente</th>
+					<th style="width: 7%;">Total</th>
+					<th style="width: 7%;">Empleado</th>
+					<th style="width: 7%;">Dias Cred.</th>
+					<th style="width: 7%;">Fecha Venc.</th>
+					<th style="width: 12%;">Forma de Pago</th>
+					<th style="width: 7%;">Pagar</th>
+				</tr>
+			</thead>
+			<tbody class="father"></tbody>
+				{% for i in data %}
+					<tr>
+						<td>{{i.number_invoice}}</td>
+						<td>{{i.client}}</td>
+						<td><span id="total{{i.pk}}">{{i.total}}</span></td>
+						<td>{{i.employee}}</td>
+						<td>{{i.days_in_debt}}</td>
+						<td>{{i.date_expired}}</td>
+						<td>
+							<select class="form-control payment_form">
+								<option value="1">Efectivo</option>
+								<option value="2">Consignación</option>
+							</select>
+						</td>
+						<td>
+							<span class="btn_cancelled{{i.pk}}"><button class="btn btn-primary cancelled" id="{{i.pk}}">Cancelar</button></span>
+						</td>
+					</tr>
+				{% endfor %}
+		</table>
+	</div>
+</div>
+
+<div class="pd-20 card-box mb-30 col-sm-3 col-12 ml-auto">
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>Total:</td>
+				<td style="text-align: right;">$ &nbsp;<span id="Totals_Invoice">{{total}}</span></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+{% endblock %}
+{% block script %}
+
+	<script>
+
+		$(".cancelled").on('click',function(){
+			id = this.id
+			value = parseFloat($("#total"+id).text())
+			total = parseFloat($("#Totals_Invoice").text())
+			$("#Totals_Invoice").text(total - value)
+			$("#"+id).hide();
+			$(".btn_cancelled"+id).text("Cancelado")
+			$.ajax({
+				url:"{% url 'Cancelled' %}",
+				data:{'id':id,'payment_form':$(".payment_form").val()},
+				success:function(data){
+
+				}
+			})
+
+		})
+
+	</script>
+
+{% endblock %}

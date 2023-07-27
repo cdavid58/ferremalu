@@ -26,7 +26,7 @@ class Query_Client:
 		response = requests.request("POST", url, headers=headers, data=payload)
 		client = json.loads(response.text)['client']
 		return client
-		
+
 	def GET_CONSECUTIVE(self,request):
 		url = env.GET_CONSECUTIVE
 		payload = json.dumps({
@@ -73,7 +73,7 @@ class Query_Client:
 		  'Content-Type': 'application/json'
 		}
 		response = requests.request("POST", url, headers=headers, data=payload)
-		return json.loads(response.text)['result']
+		return json.loads(response.text)#['result']
 
 	def EDIT_CLIENT(self,data):
 		url = env.EDIT_CLIENT

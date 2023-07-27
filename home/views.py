@@ -15,17 +15,11 @@ def storeInQueue(f):
 def Index(request):
 	if 'work_start' not in request.session:
 		request.session['work_start'] = time.time()
-	u = threading.Thread(target=Generated_File,args=(request,), name='Invoice')
-	u.start()
+# 		Generated_File(request)<<
 	return render(request,'index.html')
 
 @storeInQueue
 def Generated_File(request):
-	path = env.ENVIROMENT_FOLDER_LOG + 'home.log'
-	if os.path.exists(path):
-		os.remove(path)
-	logging.basicConfig(filename=path, encoding='utf-8', level=logging.DEBUG)
-
 	try:
 		query = Query_Invoice()
 		list_invoice_fe = query.GET_LIST_INVOICE(request,1)
@@ -50,7 +44,7 @@ def Generated_File(request):
 		response = requests.request("POST", url, headers=headers, data=payload)
 		with open(env.LIST_EMPLOYEE,'w') as file:
 			json.dump(json.loads(response.text),file,indent=4)
-			
+
 		del query
 	except Exception as e:
-		logging.error(str(e))
+		pass

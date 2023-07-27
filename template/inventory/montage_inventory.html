@@ -101,7 +101,7 @@
 	<script>
 		let data_inventory;
 		$(document).ready(function(){
-			
+
 			t = $('#father').DataTable({
 	    		destroy:true,
 	    		scrollCollapse: true,
@@ -117,14 +117,14 @@
 					searchPlaceholder: "Buscar factura",
 					paginate: {
 						next: '<i class="ion-chevron-right"></i>',
-						previous: '<i class="ion-chevron-left"></i>'  
+						previous: '<i class="ion-chevron-left"></i>'
 					}
 				}
 	    	})
 			// $("#DOCUMENT_ERROR_XLSX").click()
 
 			n = 0
-			
+
 			var selectedFile;
 	        document
 	          .getElementById("fileUpload")
@@ -133,7 +133,7 @@
 	            var fileReader = new FileReader();
 	              fileReader.onload = function(event) {
 	                var data = event.target.result;
-	    
+
 	                var workbook = XLSX.read(data, {
 	                  type: "binary"
 	                });
@@ -148,12 +148,15 @@
 	                  	n += 1
 	                  }
 	                  for(var i = 0; i < jsonObject.length; i++){
+	                      if(jsonObject[i].PRECIO1 !== "nada"){
 	                  	t.row.add([
 	                  		jsonObject[i].CODIGO, jsonObject[i].PRODUCTO,jsonObject[i].CANTIDAD,
 	                  		jsonObject[i].IVA,jsonObject[i].COSTO,jsonObject[i].PRECIO1,
 	                  		jsonObject[i].PRECIO2,jsonObject[i].PRECIO3,jsonObject[i].PRECIO4,
 	                  		jsonObject[i].PRECIO5
 	                  	]).draw(false);
+	                  	console.log("Montando")
+		                }
 	                  }
 	                });
 	              };
@@ -163,7 +166,6 @@
 	        $(".save_inventory").click(function(){
 	        	$(".loader").click()
 	        	$.ajax({
-	        		url:"{% url 'Montage_Inventory' %}",
 	        		type:"POST",
 							data:{"data_inventory":JSON.stringify(data_inventory),csrfmiddlewaretoken: '{{ csrf_token }}'},
 							complete:function(data){

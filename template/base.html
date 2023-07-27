@@ -1,11 +1,11 @@
 {% load static %}
 {% spaceless %}
 <!DOCTYPE html>
-<html>
+<html manifest="http://localhost:8000/example.mf">
 <head>
 	<!-- Basic Page Info -->
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<title>Buggy Licores</title>
+	<title>FerreMalu - {% block name %}{% endblock %}</title>
 
 	<!-- Site favicon -->
 	<link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon.ico' %}">
@@ -28,12 +28,13 @@
 	<link rel="stylesheet" type="text/css" href="{% static 'src/plugins/jquery-steps/jquery.steps.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'src/plugins/dropzone/src/dropzone.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'vendors/styles/style.css' %}">
+	<link rel="stylesheet" href="https://www.jqueryscript.net/demo/Classic-Growl-like-Notification-Plugin-For-jQuery-Gritter/css/jquery.gritter.css">
 
 	<style>
-		input[type=number]::-webkit-inner-spin-button, 
-		input[type=number]::-webkit-outer-spin-button { 
-		  -webkit-appearance: none; 
-		  margin: 0; 
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
 		}
 		input[type=number] { -moz-appearance:textfield; }
 	</style>
@@ -50,18 +51,21 @@
 	</script>
 </head>
 <body>
-	<div class="pre-loader">
-		<div class="pre-loader-box">
-			<div class="loader-logo"><img src="{% static 'logos_menu/logo.png' %}" alt=""></div>
-			<div class='loader-progress' id="progress_div">
-				<div class='bar' id='bar1'></div>
-			</div>
-			<div class='percent' id='percent1'>0%</div>
-			<div class="loading-text">
-				{% block loading%}Loading...{% endblock %}
-			</div>
-		</div>
-	</div>
+    {% block preloader %}
+    	<div class="pre-loader">
+    		<div class="pre-loader-box">
+    			<div class="loader-logo"><img src="{% static 'logos_menu/logo.png' %}" alt=""></div>
+    			<div class='loader-progress' id="progress_div">
+    				<div class='bar' id='bar1'></div>
+    			</div>
+    			<div class='percent' id='percent1'>0%</div>
+    			<div class="loading-text">
+    				{% block loading%}Loading...{% endblock %}
+    			</div>
+    		</div>
+    	</div>
+    {% endblock %}
+
 
 	<div class="header">
 		<div class="header-left">
@@ -127,42 +131,7 @@
 										<h3>John Doe</h3>
 										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
 									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo1.jpg" alt="">
-										<h3>Lea R. Frith</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo2.jpg" alt="">
-										<h3>Erik L. Richards</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo3.jpg" alt="">
-										<h3>John Doe</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/photo4.jpg" alt="">
-										<h3>Renee I. Hansen</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
-								<li>
-									<a href="#">
-										<img src="vendors/images/img.jpg" alt="">
-										<h3>Vicki M. Coleman</h3>
-										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed...</p>
-									</a>
-								</li>
+								</li
 							</ul>
 						</div>
 					</div> -->
@@ -182,85 +151,10 @@
 				</div>
 			</div>
 			<div class="github-link">
-				<a href="https://github.com/dropways/deskapp" target="_blank"><img src="vendors/images/github.svg" alt=""></a>
+
 			</div>
 		</div>
 	</div>
-
-	<!-- <div class="right-sidebar">
-		<div class="sidebar-title">
-			<h3 class="weight-600 font-16 text-blue">
-				Layout Settings
-				<span class="btn-block font-weight-400 font-12">User Interface Settings</span>
-			</h3>
-			<div class="close-sidebar" data-toggle="right-sidebar-close">
-				<i class="icon-copy ion-close-round"></i>
-			</div>
-		</div>
-		<div class="right-sidebar-body customscroll">
-			<div class="right-sidebar-body-content">
-				<h4 class="weight-600 font-18 pb-10">Header Background</h4>
-				<div class="sidebar-btn-group pb-30 mb-10">
-					<a href="javascript:void(0);" class="btn btn-outline-primary header-white active">White</a>
-					<a href="javascript:void(0);" class="btn btn-outline-primary header-dark">Dark</a>
-				</div>
-
-				<h4 class="weight-600 font-18 pb-10">Sidebar Background</h4>
-				<div class="sidebar-btn-group pb-30 mb-10">
-					<a href="javascript:void(0);" class="btn btn-outline-primary sidebar-light ">White</a>
-					<a href="javascript:void(0);" class="btn btn-outline-primary sidebar-dark active">Dark</a>
-				</div>
-
-				<h4 class="weight-600 font-18 pb-10">Menu Dropdown Icon</h4>
-				<div class="sidebar-radio-group pb-10 mb-10">
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebaricon-1" name="menu-dropdown-icon" class="custom-control-input" value="icon-style-1" checked="">
-						<label class="custom-control-label" for="sidebaricon-1"><i class="fa fa-angle-down"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebaricon-2" name="menu-dropdown-icon" class="custom-control-input" value="icon-style-2">
-						<label class="custom-control-label" for="sidebaricon-2"><i class="ion-plus-round"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebaricon-3" name="menu-dropdown-icon" class="custom-control-input" value="icon-style-3">
-						<label class="custom-control-label" for="sidebaricon-3"><i class="fa fa-angle-double-right"></i></label>
-					</div>
-				</div>
-
-				<h4 class="weight-600 font-18 pb-10">Menu List Icon</h4>
-				<div class="sidebar-radio-group pb-30 mb-10">
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-1" name="menu-list-icon" class="custom-control-input" value="icon-list-style-1" checked="">
-						<label class="custom-control-label" for="sidebariconlist-1"><i class="ion-minus-round"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-2" name="menu-list-icon" class="custom-control-input" value="icon-list-style-2">
-						<label class="custom-control-label" for="sidebariconlist-2"><i class="fa fa-circle-o" aria-hidden="true"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-3" name="menu-list-icon" class="custom-control-input" value="icon-list-style-3">
-						<label class="custom-control-label" for="sidebariconlist-3"><i class="dw dw-check"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-4" name="menu-list-icon" class="custom-control-input" value="icon-list-style-4" checked="">
-						<label class="custom-control-label" for="sidebariconlist-4"><i class="icon-copy dw dw-next-2"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-5" name="menu-list-icon" class="custom-control-input" value="icon-list-style-5">
-						<label class="custom-control-label" for="sidebariconlist-5"><i class="dw dw-fast-forward-1"></i></label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="sidebariconlist-6" name="menu-list-icon" class="custom-control-input" value="icon-list-style-6">
-						<label class="custom-control-label" for="sidebariconlist-6"><i class="dw dw-next"></i></label>
-					</div>
-				</div>
-
-				<div class="reset-options pt-30 text-center">
-					<button class="btn btn-danger" id="reset-settings">Reset Settings</button>
-				</div>
-			</div>
-		</div>
-	</div> -->
 
 	{% include './slider.html' %}
 	<div class="mobile-menu-overlay"></div>
@@ -275,8 +169,34 @@
 	</div>
 	<button type="button" class="btn mb-20 btn-primary btn-block" hidden id="REGISTRAMOSCLIENTE">Click me</button>
 
+
+
+	<!-- Button trigger modal -->
+	<button type="button" hidden class="btn btn-primary generadorpdf" data-toggle="modal" data-target="#generandocumentopdf">
+	  Launch static backdrop modal
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="generandocumentopdf" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="staticBackdropLabel">ESPERE</h5>
+	      </div>
+	      <div class="modal-body">
+	        Estamos generando su documento
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary close_modal_pdf" hidden data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<!-- js -->
-	
+
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+
 	<script src="{% static 'vendors/scripts/core.js' %}"></script>
 	<script src="{% static 'vendors/scripts/script.min.js' %}"></script>
 	<script src="{% static 'vendors/scripts/process.js' %}"></script>
@@ -313,6 +233,7 @@
 	<script src="{% static 'src/plugins/jquery-steps/jquery.steps.js' %}"></script>
 	<script src="{% static 'vendors/scripts/steps-setting.js' %}"></script>
 	<script src="{% static 'src/plugins/dropzone/src/dropzone.js' %}"></script>
+	<script src="https://www.jqueryscript.net/demo/Classic-Growl-like-Notification-Plugin-For-jQuery-Gritter/js/jquery.gritter.js"></script>
 	<script>
 		Dropzone.autoDiscover = false;
 		$(".dropzone").dropzone({
@@ -323,8 +244,11 @@
 				return (_ref = file.previewElement) != null ? _ref.parentNode.removeChild(file.previewElement) : void 0;
 			}
 		});
+
+
+
 	</script>
-	
+
 	{% block script %}{% endblock %}
 </body>
 </html>

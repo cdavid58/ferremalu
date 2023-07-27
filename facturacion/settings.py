@@ -27,7 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user','home','fe','shopping',
-    'payroll','reports',
+    'payroll','reports','wallet',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -38,7 +39,13 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
 ]
+
+CORS_ORIGIN_WHITELIST = (
+'https://ferremalu.pythonanywhere.com',  # for localhost (REACT Default)
+'http://localhost',
+)
 
 ROOT_URLCONF = 'facturacion.urls'
 

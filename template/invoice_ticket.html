@@ -1,0 +1,129 @@
+<div class="bill">
+  <div class="brand">
+    <strong style="font-size:15px;">FERREMALU</strong>
+  </div>
+  <div class="address">
+    CALLE 48 #3B - 14 BARRIO DE JESUS
+    <br>
+    VIA SANTA ELENA. LA CURVA DE JALISTO
+    <br>
+    TEL No- 3142012128
+  </div>
+  <div class="shop-details">
+    NIT: 43630278-1 <span style="font-size:8px;">NO RESPONSABLE DE IVA</span>
+  </div><br>
+  <div>FACTURA DE VENTA </div>
+  <div class="bill-details">
+    <div class="flex justify-between">
+      <div>FACT N°: {{information.consecutive}}</div>
+      <div></div>
+    </div>
+     <div class="flex justify-between">
+      <div>FECHA: {{information.date}}</div>
+      <!-- <div>HORA: 14:10</div> -->
+    </div>
+  </div>
+  <table class="table" style="margin-top: 10px;">
+    <tr class="header">
+    <th>
+      <span style="font-size: 10px;width: 10%;">DESCRIPCION</span>
+    </th>
+    <th>
+      <span style="font-size: 10px;width:5%;">CANTIDAD</span>
+    </th> <th>
+      <span style="font-size: 10px;width:10%;">VAL. UNIT</span>
+    </th>
+    <th>
+       <span style="font-size: 10px;width:5%;">TOTAL</span>
+    </th>
+    </tr>
+    	<!-- START ROWS -->
+
+    {% for i in details_product %}
+	    <tr style="">
+	      <td> <span style="font-size: 10px;">{{i.description}}</span></td>
+	      <td> <span style="font-size: 10px;text-align: right !important;">{{i.quanty|floatformat:0}}</span></td>
+	      <td> <span style="font-size: 10px;text-align: center;">{{i.price_base|floatformat:0}}</span></td>
+	      <td> <span style="font-size: 10px;text-align: center;">{{i.subtotal|floatformat:0}}</span></td>
+	    </tr>
+    {% endfor %}
+
+    <!-- END ROWS -->
+
+    <tr class="total" style="margin-bottom: 15px;">
+      <!-- <td></td>
+      <td> <span style="font-size: 12px;">SubTotal:</span></td>
+      <td> <span style="font-size: 12px;"></span></td>
+      <td> <span style="font-size: 12px;"><strong>{{subtotal_invoice}}</strong></span></td> -->
+    </tr>
+    <tr class="net-amount">
+      <td></td>
+      <td>Total:</td>
+      <td></td>
+      <td><strong>{{total}}</strong></td>
+    </tr>
+  </table>
+  <!-- Payment Method:Card<br>
+ Transaction ID: 082098082783
+  <br>Username: Pradeep [Biller] <br> -->
+  Gracias ! Por favor visite de nuevo
+</div>
+<style>
+	body {
+	  color: #000;
+	  text-align:center;
+	  display: flex;
+	  justify-content: center;
+	  font-size: 10px;
+	}
+	.bill{
+	  width: 250px;
+	  padding: 25px 15px;
+	  box-sizing: border-box;
+	}
+	.flex {
+	  display: flex;
+	}
+	.justify-between {
+	  justify-content: space-between;
+	}
+	.table{
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+	.table .header{
+	  border-top: 2px dashed #000;
+	  border-bottom: 2px dashed #000;
+	}
+	.table {
+	  text-align: left;
+	}
+	.table .total td:first-of-type {
+	  border-top: none;
+	  border-bottom: none;
+	  margin-top: 15px;
+	}
+	.table .total td {
+	  border-top: 2px dashed #000;
+	  border-bottom: 2px dashed #000;
+	}
+	.table .net-amount td:first-of-type {
+	  border-top: none;
+	}
+	.table .net-amount td {
+	  border-top: 2px dashed #000;
+	  font-size: 12px !important;
+	}
+	.table .net-amount{
+	  border-bottom: 2px dashed #000;
+	}
+	@media print {
+	    .hidden-print,
+	    .hidden-print * {
+	        display: none !important;
+	    }
+	}
+</style>
+<script>
+	window.print();
+</script>

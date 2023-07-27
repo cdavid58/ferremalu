@@ -13,28 +13,18 @@ def storeInQueue(f):
   return wrapper
 
 def List_Client(request):
-	u = threading.Thread(target=GET_CLIENT_LIST,args=(request,), name='Invoice')
-	u.start()
+	GET_CLIENT_LIST(request)
 	return render(request,'client/list_client.html',{'json':enviroments_json + "/static/clients.json"})
 
-
-
-@storeInQueue
 def GET_CLIENT_LIST(request):
-	path = env.ENVIROMENT_FOLDER_LOG + 'inventory_get_iventory_list.log'
-	if os.path.exists(path):
-		os.remove(path)
 	try:
-		logging.basicConfig(filename=path, encoding='utf-8', level=logging.DEBUG)
 		list_client = Query_Client().GET_LIST_CLIENT(request)
 		with open(env.FILE_JSON_CLIENTS, 'w') as file:
 			json.dump(list_client, file, indent=4)
 		del list_client
 	except Exception as e:
-		logging.error(str(e))
+		pass
 
-	logging.close()
-	
 
 def Add_Client(request):
 	return render(request,'client/add.html')
@@ -80,8 +70,7 @@ def EDIT_CLIENT(request):
 		print(_data)
 		qc = Query_Client().EDIT_CLIENT(_data)
 		if qc['result']:
-			u = threading.Thread(target=GET_CLIENT_LIST,args=(request,), name='Invoice')
-			u.start()
+			GET_CLIENT_LIST(request)
 		return HttpResponse(qc['result'])
 
 

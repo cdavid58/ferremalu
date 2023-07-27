@@ -13,7 +13,7 @@ class Query_API:
 		response = requests.request("POST", url, headers=headers, data=payload)
 		result = json.loads(response.text)
 		if result['result']:
-			request.session['name_user'] = data['user']			
+			request.session['name_user'] = data['user']
 			request.session['employee_pk'] = result['employee']
 			request.session['company_pk'] = result['company']
 			request.session['prefix'] = result['prefix']
@@ -47,7 +47,7 @@ class Query_API:
 		return json.loads(response.text)
 
 	def DELETE_EMPLOYEE(self,pk):
-		url = "http://localhost:9090/employee/DELETE_EMPLOYEE/"
+		url = "https://apiferre.pythonanywhere.com/employee/DELETE_EMPLOYEE/"
 		payload = json.dumps({"pk": pk})
 		headers = {'Content-Type': 'application/json'}
 		response = requests.request("POST", url, headers=headers, data=payload)

@@ -1,5 +1,5 @@
 var options = {
-	series: [80],
+	series: [1],
 	grid: {
 		padding: {
 			top: 0,
@@ -12,7 +12,7 @@ var options = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -69,7 +69,7 @@ var options = {
 };
 
 var options2 = {
-	series: [70],
+	series: [3],
 	grid: {
 		padding: {
 			top: 0,
@@ -82,7 +82,7 @@ var options2 = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -139,7 +139,7 @@ var options2 = {
 };
 
 var options3 = {
-	series: [75],
+	series: [0],
 	grid: {
 		padding: {
 			top: 0,
@@ -152,7 +152,7 @@ var options3 = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -209,7 +209,7 @@ var options3 = {
 };
 
 var options4 = {
-	series: [85],
+	series: [0],
 	grid: {
 		padding: {
 			top: 0,
@@ -222,7 +222,7 @@ var options4 = {
 		height: 100,
 		width: 70,
 		type: 'radialBar',
-	},	
+	},
 	plotOptions: {
 		radialBar: {
 			hollow: {
@@ -460,7 +460,7 @@ $('document').ready(function(){
 			searchPlaceholder: "Search",
 			paginate: {
 				next: '<i class="ion-chevron-right"></i>',
-				previous: '<i class="ion-chevron-left"></i>'  
+				previous: '<i class="ion-chevron-left"></i>'
 			}
 		},
 	});

@@ -2,14 +2,28 @@ from django.http import HttpResponse
 from django.shortcuts import render
 import json,env, threading, queue, requests, urllib, logging, os
 from query_inventory import Query_Inventory
+from from_number_to_letters import Thousands_Separator
+from barcode import Code128
+from barcode.writer import ImageWriter
 
 enviroments_json = env.ENVIROMENT_JSON
 
 def List_Inventory(request):
-	list_inventory = Query_Inventory().GET_LIST_INVENTORY(request)
-	with open(env.FILE_JSON_INVENTORY, 'w') as file:
-		json.dump(list_inventory, file, indent=4)
-	return render(request,'inventory/list_inventory.html',{'json':enviroments_json+"/static/inventory.json"})
+# 	Refresh_List_Inventory(request)
+	return render(request,'inventory/list_inventory.html',{'json':enviroments_json+"/static/inventory.json",'price_1':Thousands_Separator(round(Utili('price_1'))),
+		'price_2':Thousands_Separator(round(Utili('price_2'))),'price_3':Thousands_Separator(round(Utili('price_3'))),
+		'inventory':Query_Inventory().GET_LIST_INVENTORY(request)
+		})
+
+def Utili(value):
+	with open(env.FILE_JSON_INVENTORY) as file:
+		data = json.load(file)
+	total = 0
+	for i in data:
+		cost = float(i['cost'])
+		price = float(i[value])
+		total += ((price - cost) * float(i['quanty']))
+	return total
 
 def Add_Product(request):
 	return render(request,'inventory/add.html')
@@ -31,8 +45,10 @@ def UPDATED_PRODUCT(request):
 		_data = {
 	    "pk":request.session['pk_product'],
 	    "name":data['name'],
-	    "tax":data['tax'],
+	    "tax":0,
 	    "quanty":data['quanty'],
+	    "metros":data['metros'],
+	    "und":data['und'],
 	    "cost":data['cost'],
 	    "price_1":data['price_1'],
 	    "price_2":data['price_2'],
@@ -47,7 +63,7 @@ def UPDATED_PRODUCT(request):
 		if result['result']:
 			message = result['message']
 			Refresh_List_Inventory(request)
-		return HttpResponse(result['result'])		
+		return HttpResponse(result['result'])
 
 my_queue = queue.Queue()
 def storeInQueue(f):
@@ -57,17 +73,13 @@ def storeInQueue(f):
   return wrapper
 
 def Refresh_List_Inventory(request):
-	path = env.ENVIROMENT_FOLDER_LOG + 'refresh_list_inventory.log'
-	if os.path.exists(path):
-		os.remove(path)
-	logging.basicConfig(filename=path, encoding='utf-8', level=logging.DEBUG)
 	try:
 		list_inventory = Query_Inventory().GET_LIST_INVENTORY(request)
 		with open(env.FILE_JSON_INVENTORY, 'w') as file:
 			json.dump(list_inventory, file, indent=4)
 	except Exception as e:
-		logging.error(str(e))
-	
+		pass
+
 
 def Save_Product(request):
 	if request.is_ajax():
@@ -117,7 +129,7 @@ def Montage_Inventory(request):
 				title='EXITO',
 				app_name="Evansoft",
 				message='Proceso finalizado',
-				app_icon = "./static/favicon.ico"
+				app_icon = "/home/ferremalu/ferremalu/static/favicon.ico"
 			)
 		return HttpResponse(data)
 	return render(request,'inventory/montage_inventory.html')
@@ -126,3 +138,33 @@ def Montage_Inventory(request):
 def Montage(request,data):
 	result = Query_Inventory().CREATE_PRODUCT_EXCEL(request,data)
 	return result
+
+
+def normalize(s):
+    replacements = (
+        ("á", "a"),
+        ("é", "e"),
+        ("í", "i"),
+        ("ó", "o"),
+        ("ú", "u"),
+        ("ü", "u"),
+    )
+    for a, b in replacements:
+        s = s.replace(a, b).replace(a.upper(), b.upper())
+    return s
+
+
+def CreateCodeBar(request):
+	if request.is_ajax():
+		from static.code_bar.generatos_code_bar import Generador
+		with open(env.FILE_JSON_INVENTORY) as file:
+			data = json.load(file)
+		for i in data:
+			print(i['name'])
+			with open(str(normalize(i['name'].lower()).replace('/','-').replace('\\','-').replace('*','').replace('"',''))+'.jpg','wb') as f:
+				Code128(str(normalize(i['name'].replace('°','').lower())), writer = ImageWriter()).write(f)
+# 			break
+		Generador()
+		return HttpResponse()
+
+

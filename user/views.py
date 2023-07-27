@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render,redirect
 from .query_api import Query_API
 import json, requests, env,time
+from from_number_to_letters import Thousands_Separator
 
 enviroments_json = env.ENVIROMENT_JSON
 
@@ -20,12 +21,22 @@ def Add_Employee(request):
 		return HttpResponse(True)
 	return render(request,'inventory/add.html')
 
+def Close_Box(request):
+	url = env.CLOSE_BOX_TOTAL
+	payload = json.dumps({})
+	headers = {
+	  'Content-Type': 'application/json'
+	}
+	response = requests.request("POST", url, headers=headers, data=payload)
+
+
+
 def LogOut(request):
 	start = request.session['work_start']
 	print(time.time() - start)
 	for i,j in list(request.session.items()):
 		del request.session[i]
-
+	Close_Box(request)
 	return redirect('/')
 
 def Refresh_Employee(request):
@@ -67,7 +78,7 @@ def UPDATED_EMPLOYEE(request):
 		url = env.GET_LIST_EMPLOYEE
 		payload = json.dumps({"company": request.session['company_pk']})
 		headers = {'Content-Type': 'application/json'}
-		response = requests.request("POST", url, headers=headers, data=payload)		
+		response = requests.request("POST", url, headers=headers, data=payload)
 		with open(env.LIST_EMPLOYEE,'w') as file:
 			json.dump(json.loads(response.text),file,indent=4)
 		return HttpResponse(result)
@@ -83,3 +94,35 @@ def DELETE_EMPLOYEE(request):
 		message = Query_API().DELETE_EMPLOYEE(request.GET['pk'])
 		Refresh_Employee(request)
 		return HttpResponse(message)
+
+def Get_List_Close_Box(request):
+	url = env.GET_LIST_CLOSE_BOX
+	payload = json.dumps({})
+	headers = {'Content-Type': 'application/json'}
+	response = requests.request("POST", url, headers=headers, data=payload)
+	response_dict = json.loads(response.text)
+	total = 0
+	for i in response_dict:
+		total += (float(i['efec']) + float(i['cred']) + float(i['trans']))
+	return render(request,'report/close_box.html',{'close_box':response_dict,'total':Thousands_Separator(round(total,0))})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

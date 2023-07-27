@@ -9,5 +9,6 @@ urlpatterns=[
 	url(r'^UPDATED_EMPLOYEE/$',UPDATED_EMPLOYEE,name="UPDATED_EMPLOYEE"),
 	url(r'^CREATE_EMPLOYEE/$',CREATE_EMPLOYEE,name="CREATE_EMPLOYEE"),
 	url(r'^DELETE_EMPLOYEE/$',DELETE_EMPLOYEE,name="DELETE_EMPLOYEE"),
+	url(r'^Get_List_Close_Box/$',Get_List_Close_Box,name="Get_List_Close_Box"),
 	url(r'^Edit/(\d+)/$',Edit,name="Edit"),
 ]

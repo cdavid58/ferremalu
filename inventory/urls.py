@@ -8,5 +8,6 @@ urlpatterns=[
 		url(r'^UPDATED_PRODUCT/$',UPDATED_PRODUCT,name="UPDATED_PRODUCT"),
 		url(r'^Montage_Inventory/$',Montage_Inventory,name="Montage_Inventory"),
 		url(r'^DELETE_PRODUCT/$',DELETE_PRODUCT,name="DELETE_PRODUCT"),
+		url(r'^CreateCodeBar/$',CreateCodeBar,name="CreateCodeBar"),
 		url(r'^Edit_Product/(\d+)/$',Edit_Product,name="Edit_Product"),
 	]

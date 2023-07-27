@@ -1,4 +1,5 @@
 {% extends '../base.html' %}
+{% load static %}
 {% block loading %}Agreguemos un producto{% endblock %}
 {% block content %}
 
@@ -14,9 +15,11 @@
 		<div class="pull-left">
 			<h4 class="text-blue h4">Agregar Producto</h4>
 		</div>
-		<!-- <div class="pull-right">
-			<button type="button" data-toggle="modal" data-target="#Medium-modal" class="btn btn-primary">Registrar Proveedor</button>
-		</div> -->
+		 <div class="pull-right">
+			<div class="col-md-5 col-12">
+			    <!--<button class="btn btn-primary code_bars" type="button">Scanner</button>-->
+			</div>
+		</div>
 	</div>
 	<form class="form_data_product">
 		<br>
@@ -29,71 +32,80 @@
 		<div class="form-group row">
 			<label class="col-sm-12 col-md-2 col-form-label">Nombre del Producto</label>
 			<div class="col-sm-12 col-md-10">
-				<input name="name" class="form-control" type="text" placeholder="Harina Pan">
+				<input name="name" class="form-control name_product" type="text" placeholder="Harina Pan">
 			</div>
 		</div>
-		<div class="form-group row">
+		<!-- <div class="form-group row">
 			<label class="col-sm-12 col-md-2 col-form-label">Cantidad</label>
 			<div class="col-sm-12 col-md-10">
 				<input name="quanty" class="form-control text-right" value="0" type="number">
 			</div>
-		</div>
+		</div> -->
 		<div class="form-group row">
+			<div class="col-md-4 col-4">
+				<div class="form-group">
+					<label>Cantidad</label>
+					<input type="number"  name="quanty" placeholder="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-4 col-4">
+				<div class="form-group">
+					<label>Metros</label>
+					<input type="number" name="metros" placeholder="0" class="form-control text-right">
+				</div>
+			</div>
+			<div class="col-md-4 col-4">
+				<div class="form-group">
+					<label>Kilos</label>
+					<input type="number" name="und" placeholder="0" class="form-control text-right">
+				</div>
+			</div>
+		</div>
+		<!-- <div class="form-group row">
 			<label class="col-sm-12 col-md-2 col-form-label">IVA</label>
 			<div class="col-sm-12 col-md-10">
 				<input name="tax" class="form-control text-right" value="0" type="number">
 			</div>
-		</div>
+		</div> -->
 
 		<div class="form-group row">
-			<div class="col-md-2 col-sm-12">
+			<div class="col-md-2 col-4">
 				<div class="form-group">
 					<label>Costo</label>
-					<input type="number" name="cost" value="0" class="form-control text-right">
+					<input type="number" name="cost" placeholder="0" class="form-control text-right">
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-12">
+			<div class="col-md-2 col-4">
 				<div class="form-group">
-					<label>Precio 1</label>
-					<input type="number" name="price_1" value="0" class="form-control text-right">
+					<label>Precio 1 - Cantidad</label>
+					<input type="number" name="price_1" placeholder="0" class="form-control text-right">
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-12">
+			<div class="col-md-2 col-4">
 				<div class="form-group">
-					<label>Precio 2</label>
-					<input type="number" name="price_2" value="0" class="form-control text-right">
+					<label>Precio 2 - Metros</label>
+					<input type="number" name="price_2" placeholder="0" class="form-control text-right">
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-12">
+			<div class="col-md-2 col-4">
 				<div class="form-group">
-					<label>Precio 3</label>
-					<input type="number" name="price_3" value="0" class="form-control text-right">
+					<label>Precio 3 - Kilos</label>
+					<input type="number" name="price_3" placeholder="0" class="form-control text-right">
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-12">
+			<div class="col-md-2 col-4">
 				<div class="form-group">
 					<label>Precio 4</label>
 					<input type="number" name="price_4" value="0" class="form-control text-right">
 				</div>
 			</div>
-			<div class="col-md-2 col-sm-12">
+			<div class="col-md-2 col-4">
 				<div class="form-group">
 					<label>Precio 5</label>
 					<input type="number" name="price_5" value="0" class="form-control text-right">
 				</div>
 			</div>
 		</div>
-		<!-- <div class="form-group row">
-			<label class="col-sm-12 col-md-2 col-form-label">Proveedor</label>
-			<div class="col-sm-12 col-md-10">
-				<select name="supplier" class="custom-select col-12 document">
-					<option selected="" value="1">Cambiar...</option>
-					{% for i in Type_DocumentI %}
-						<option value="{{i.pk}}">{{i.name}}</option>
-					{% endfor %}
-				</select>
-			</div>
-		</div> -->
 		<div class="row">
 			<button type="button" class="btn btn-primary register_product">Registrar producto</button>
 			<a type="button" href="{% url 'List_Inventory' %}" class="btn btn-primary col-xs-12 register_client ml-auto">Lista de producto</a>
@@ -101,52 +113,26 @@
 	</form>
 </div>
 
+<a href="#" hidden class="btn-block modal_scanner_cod_bars" data-toggle="modal" data-target="#bd-example-modal-lg" type="button">
+	escaner
+</a>
 
-<div class="modal fade" id="Medium-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered">
+
+
+<div class="modal fade bs-example-modal-lg" id="bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h4 class="modal-title" id="myLargeModalLabel">Registro proveedor</h4>
+				<h4 class="modal-title" id="myLargeModalLabel">Escaner de código de barras</h4>
 				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 			</div>
 			<div class="modal-body">
-				<form id="register_seller">
-					<div class="form-group row">
-						<label class="col-sm-12 col-md-2 col-form-label">NIT</label>
-						<div class="col-sm-12 col-md-10">
-							<input name="code" class="form-control docI" type="text">
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-12 col-md-2 col-form-label">Nombre</label>
-						<div class="col-sm-12 col-md-10">
-							<input name="code" class="form-control docI" type="text">
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-12 col-md-2 col-form-label">Teléfono</label>
-						<div class="col-sm-12 col-md-10">
-							<input name="code" class="form-control docI" type="text">
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-12 col-md-2 col-form-label">Email</label>
-						<div class="col-sm-12 col-md-10">
-							<input name="code" class="form-control docI" type="email">
-						</div>
-					</div>
-					<div class="form-group row">
-						<label class="col-sm-12 col-md-2 col-form-label">Dirección</label>
-						<div class="col-sm-12 col-md-10">
-							<input name="code" class="form-control docI" type="text">
-						</div>
-					</div>
-
-				</form>
+				<!-- <p id="resultado">Aquí aparecerá el código</p>
+				<p>A continuación, el contenedor: </p> -->
+				<div id="contenedor"></div>
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-				<button type="button" class="btn btn-primary">Registrar</button>
+				<button type="button" class="btn btn-secondary close_modal_code_bars" data-dismiss="modal">Cerrar</button>
 			</div>
 		</div>
 	</div>
@@ -154,10 +140,12 @@
 
 <button type="button" class="btn mb-20 btn-primary btn-block" hidden id="PRODUCT_SAVE_SUCCESS"></button>
 <button type="button" class="btn mb-20 btn-primary btn-block" hidden id="PRODUCT_SAVE_ERROR"></button>
+
 {% endblock %}
 {% block script %}
 
 <script>
+
 	function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     }
@@ -175,6 +163,11 @@
 		$(".docI").focus()
     }
 	$(document).ready(function() {
+
+	    $(".code_bars").click(function(){
+			$(".modal_scanner_cod_bars").click()
+		})
+
 		$(".register_product").click(function(){
 			$("#REGISTRAMOSCLIENTE").click()
 			$.ajax({
@@ -184,8 +177,8 @@
 					if(data == "True"){
 						$("#PRODUCT_SAVE_SUCCESS").click()
 						time_sleep()
-     					
-					}					
+
+					}
 					else{
 						$("#PRODUCT_SAVE_ERROR").click()
 					}

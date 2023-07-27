@@ -6,7 +6,6 @@
 	<div class="clearfix">
 		<div class="pull-left">
 			<h4 class="text-blue h4">Agregar Cliente</h4>
-			<!-- <p class="mb-30">All bootstrap element classies</p> -->
 		</div>
 	</div>
 	<form class="form_data_client">
@@ -70,7 +69,7 @@
 		</div>
 		<div class="row">
 			<button type="button" class="btn btn-primary register_client">Registrar cliente</button>
-			<a type="button" href="{% url 'List_Client' %}" class="btn btn-primary register_client ml-auto">Lista de cliente</a>
+			<a type="button" href="{% url 'List_Client' %}" class="btn btn-primary ml-auto">Lista de cliente</a>
 		</div>
 	</form>
 </div>
@@ -94,10 +93,10 @@
 	}
 	$(document).ready(function(){
 
-		GetData("document","http://localhost:8000/static/type_documentI.json")
-		GetData("organization","http://localhost:8000/static/type_organizations.json")
-		GetData("regime","http://localhost:8000/static/type_regimen.json")
-		GetData("municipality","http://localhost:8000/static/municipalitys.json")
+		GetData("document","https://ferremalu.pythonanywhere.com/static/type_documentI.json")
+		GetData("organization","https://ferremalu.pythonanywhere.com/static/type_organizations.json")
+		GetData("regime","https://ferremalu.pythonanywhere.com/static/type_regimen.json")
+		GetData("municipality","https://ferremalu.pythonanywhere.com/static/municipalitys.json")
 
 		$(".register_client").click(function(){
 			if($(".docI").val().length == 9 || $(".docI").val().length == 12){
@@ -108,7 +107,8 @@
 					success:function(data){
 						console.log(data)
 						data = JSON.parse(data)
-						if(data['result']){
+						console.log(data['Result']['result'])
+						if(data['Result']['result']){
 							$("form select").each(function() { this.selectedIndex = 0 });
 	     					$("form input[type=text]").each(function() { this.value = '' });
 	     					$("form input[type=number]").each(function() { this.value = '' });

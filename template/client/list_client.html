@@ -18,7 +18,7 @@
 <div class="card-box mb-30">
 	<div class="pd-20">
 		<h4 class="text-blue h4">
-			
+
 		</h4>
 	</div>
 	<div class="pb-20">
@@ -55,7 +55,7 @@
 									<i class="dw dw-more"></i>
 								</a>
 								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-									<a class="dropdown-item" href="http://localhost:8000/client/Edit_Client/${data[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
+									<a class="dropdown-item" href="https://ferremalu.pythonanywhere.com/client/Edit_Client/${data[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
 									${
 										(type_employee == 1) ?
 										`<button class="dropdown-item delete_client" id="${data[i]['pk']}"><i class="dw dw-trash"></i> Eliminar</button>`:""
@@ -86,7 +86,7 @@
 				searchPlaceholder: "Buscar cliente",
 				paginate: {
 					next: '<i class="ion-chevron-right"></i>',
-					previous: '<i class="ion-chevron-left"></i>'  
+					previous: '<i class="ion-chevron-left"></i>'
 				}
 			}
 		});
@@ -105,7 +105,7 @@
 				url:"{% url 'DELETE_CLIENT' %}",
 				data:{'pk':id}
 			})
-			
+
 		})
 
 

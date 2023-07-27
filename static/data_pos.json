@@ -1,20 +1,5402 @@
 [
     {
-        "pk": 6,
-        "consecutive": 8978,
-        "client": "David",
-        "total": 2380.95,
+        "pk": 1657,
+        "consecutive": 703,
+        "client": "Cliente General",
+        "total": 5400.0,
         "state": "Factura Creada con \u00e9xito",
-        "date": "2023-01-24",
+        "date": "2023-06-09",
         "cufe": null
     },
     {
-        "pk": 5,
-        "consecutive": 1,
-        "client": "David",
-        "total": 2380.95,
+        "pk": 1656,
+        "consecutive": 702,
+        "client": "Cliente General",
+        "total": 33500.0,
         "state": "Factura Creada con \u00e9xito",
-        "date": "2023-01-24",
+        "date": "2023-06-09",
+        "cufe": null
+    },
+    {
+        "pk": 1655,
+        "consecutive": 701,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-06-09",
+        "cufe": null
+    },
+    {
+        "pk": 1654,
+        "consecutive": 700,
+        "client": "Cliente General",
+        "total": 26000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-06-01",
+        "cufe": null
+    },
+    {
+        "pk": 1653,
+        "consecutive": 699,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-30",
+        "cufe": null
+    },
+    {
+        "pk": 1652,
+        "consecutive": 698,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-30",
+        "cufe": null
+    },
+    {
+        "pk": 1651,
+        "consecutive": 697,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1650,
+        "consecutive": 696,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1649,
+        "consecutive": 695,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1648,
+        "consecutive": 694,
+        "client": "Cliente General",
+        "total": 20000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1647,
+        "consecutive": 693,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1646,
+        "consecutive": 692,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1645,
+        "consecutive": 691,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1644,
+        "consecutive": 690,
+        "client": "Cliente General",
+        "total": 28000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1643,
+        "consecutive": 689,
+        "client": "Cliente General",
+        "total": 8000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-25",
+        "cufe": null
+    },
+    {
+        "pk": 1642,
+        "consecutive": 688,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-05-20",
+        "cufe": null
+    },
+    {
+        "pk": 1641,
+        "consecutive": 687,
+        "client": "Cliente General",
+        "total": 27000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-18",
+        "cufe": null
+    },
+    {
+        "pk": 1639,
+        "consecutive": 686,
+        "client": "Cliente General",
+        "total": 56000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-18",
+        "cufe": null
+    },
+    {
+        "pk": 1638,
+        "consecutive": 685,
+        "client": "Cliente General",
+        "total": 26000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-10",
+        "cufe": null
+    },
+    {
+        "pk": 1636,
+        "consecutive": 684,
+        "client": "Cliente General",
+        "total": 215500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-10",
+        "cufe": null
+    },
+    {
+        "pk": 1631,
+        "consecutive": 683,
+        "client": "Cliente General",
+        "total": 10500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-10",
+        "cufe": null
+    },
+    {
+        "pk": 1630,
+        "consecutive": 682,
+        "client": "Cliente General",
+        "total": 364200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-10",
+        "cufe": null
+    },
+    {
+        "pk": 1627,
+        "consecutive": 681,
+        "client": "Cliente General",
+        "total": 223500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-10",
+        "cufe": null
+    },
+    {
+        "pk": 1625,
+        "consecutive": 680,
+        "client": "Cliente General",
+        "total": 10500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1624,
+        "consecutive": 679,
+        "client": "Cliente General",
+        "total": 69100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1618,
+        "consecutive": 678,
+        "client": "Cliente General",
+        "total": 17000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1617,
+        "consecutive": 677,
+        "client": "Cliente General",
+        "total": 8000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1616,
+        "consecutive": 676,
+        "client": "Cliente General",
+        "total": 7000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1615,
+        "consecutive": 675,
+        "client": "Cliente General",
+        "total": 20700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1613,
+        "consecutive": 674,
+        "client": "Cliente General",
+        "total": 511700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-09",
+        "cufe": null
+    },
+    {
+        "pk": 1601,
+        "consecutive": 673,
+        "client": "Cliente General",
+        "total": 112000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-08",
+        "cufe": null
+    },
+    {
+        "pk": 1600,
+        "consecutive": 672,
+        "client": "Cliente General",
+        "total": 35000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-08",
+        "cufe": null
+    },
+    {
+        "pk": 1598,
+        "consecutive": 671,
+        "client": "Cliente General",
+        "total": 366200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-08",
+        "cufe": null
+    },
+    {
+        "pk": 1594,
+        "consecutive": 670,
+        "client": "Cliente General",
+        "total": 17000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-08",
+        "cufe": null
+    },
+    {
+        "pk": 1593,
+        "consecutive": 669,
+        "client": "Cliente General",
+        "total": 178500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-08",
+        "cufe": null
+    },
+    {
+        "pk": 1591,
+        "consecutive": 668,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1590,
+        "consecutive": 667,
+        "client": "Cliente General",
+        "total": 23800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1588,
+        "consecutive": 666,
+        "client": "Cliente General",
+        "total": 8800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1587,
+        "consecutive": 665,
+        "client": "Cliente General",
+        "total": 90000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1586,
+        "consecutive": 664,
+        "client": "Cliente General",
+        "total": 14500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1584,
+        "consecutive": 663,
+        "client": "Cliente General",
+        "total": 45000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1583,
+        "consecutive": 662,
+        "client": "Cliente General",
+        "total": 74500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1581,
+        "consecutive": 661,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1580,
+        "consecutive": 660,
+        "client": "Cliente General",
+        "total": 25000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1578,
+        "consecutive": 659,
+        "client": "Cliente General",
+        "total": 5300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1577,
+        "consecutive": 658,
+        "client": "Cliente General",
+        "total": 124000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1576,
+        "consecutive": 657,
+        "client": "Cliente General",
+        "total": 219500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-05",
+        "cufe": null
+    },
+    {
+        "pk": 1573,
+        "consecutive": 656,
+        "client": "Cliente General",
+        "total": 45000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1572,
+        "consecutive": 655,
+        "client": "Cliente General",
+        "total": 47000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1570,
+        "consecutive": 654,
+        "client": "Cliente General",
+        "total": 21000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1568,
+        "consecutive": 653,
+        "client": "Cliente General",
+        "total": 14400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1567,
+        "consecutive": 652,
+        "client": "Cliente General",
+        "total": 1437500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1564,
+        "consecutive": 651,
+        "client": "Cliente General",
+        "total": 180000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1562,
+        "consecutive": 650,
+        "client": "Cliente General",
+        "total": 202500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-04",
+        "cufe": null
+    },
+    {
+        "pk": 1557,
+        "consecutive": 649,
+        "client": "Cliente General",
+        "total": 38400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1555,
+        "consecutive": 648,
+        "client": "Cliente General",
+        "total": 3500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1554,
+        "consecutive": 647,
+        "client": "Cliente General",
+        "total": 28000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1553,
+        "consecutive": 646,
+        "client": "Cliente General",
+        "total": 103500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1552,
+        "consecutive": 645,
+        "client": "Cliente General",
+        "total": 19500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1550,
+        "consecutive": 644,
+        "client": "Cliente General",
+        "total": 11000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1549,
+        "consecutive": 643,
+        "client": "Cliente General",
+        "total": 42500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1547,
+        "consecutive": 642,
+        "client": "Cliente General",
+        "total": 128000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1543,
+        "consecutive": 641,
+        "client": "Cliente General",
+        "total": 1240000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-03",
+        "cufe": null
+    },
+    {
+        "pk": 1539,
+        "consecutive": 640,
+        "client": "Cliente General",
+        "total": 37200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-02",
+        "cufe": null
+    },
+    {
+        "pk": 1538,
+        "consecutive": 639,
+        "client": "Cliente General",
+        "total": 6200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-02",
+        "cufe": null
+    },
+    {
+        "pk": 1536,
+        "consecutive": 638,
+        "client": "Cliente General",
+        "total": 37000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1535,
+        "consecutive": 637,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1534,
+        "consecutive": 636,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1533,
+        "consecutive": 635,
+        "client": "Cliente General",
+        "total": 55000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1531,
+        "consecutive": 634,
+        "client": "Cliente General",
+        "total": 28800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1529,
+        "consecutive": 633,
+        "client": "Cliente General",
+        "total": 89000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1527,
+        "consecutive": 632,
+        "client": "Cliente General",
+        "total": 240000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-04-01",
+        "cufe": null
+    },
+    {
+        "pk": 1526,
+        "consecutive": 631,
+        "client": "Cliente General",
+        "total": 7000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1525,
+        "consecutive": 630,
+        "client": "Cliente General",
+        "total": 70000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1524,
+        "consecutive": 629,
+        "client": "Cliente General",
+        "total": 19100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1521,
+        "consecutive": 628,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1520,
+        "consecutive": 627,
+        "client": "Cliente General",
+        "total": 73200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1515,
+        "consecutive": 626,
+        "client": "Cliente General",
+        "total": 13800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1513,
+        "consecutive": 625,
+        "client": "Cliente General",
+        "total": 8100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1511,
+        "consecutive": 624,
+        "client": "Cliente General",
+        "total": 420400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1501,
+        "consecutive": 623,
+        "client": "Cliente General",
+        "total": 9000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1499,
+        "consecutive": 622,
+        "client": "Cliente General",
+        "total": 7000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1498,
+        "consecutive": 621,
+        "client": "Cliente General",
+        "total": 5500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1497,
+        "consecutive": 620,
+        "client": "Cliente General",
+        "total": 48000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1496,
+        "consecutive": 619,
+        "client": "Cliente General",
+        "total": 5500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1495,
+        "consecutive": 618,
+        "client": "Cliente General",
+        "total": 29000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1492,
+        "consecutive": 617,
+        "client": "Cliente General",
+        "total": 2000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-31",
+        "cufe": null
+    },
+    {
+        "pk": 1491,
+        "consecutive": 616,
+        "client": "Cliente General",
+        "total": 26000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1490,
+        "consecutive": 615,
+        "client": "Cliente General",
+        "total": 24500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1487,
+        "consecutive": 614,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1486,
+        "consecutive": 613,
+        "client": "Cliente General",
+        "total": 147200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1479,
+        "consecutive": 612,
+        "client": "Cliente General",
+        "total": 450000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1476,
+        "consecutive": 611,
+        "client": "Cliente General",
+        "total": 5300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1474,
+        "consecutive": 610,
+        "client": "Cliente General",
+        "total": 262500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1472,
+        "consecutive": 609,
+        "client": "Cliente General",
+        "total": 428000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-30",
+        "cufe": null
+    },
+    {
+        "pk": 1469,
+        "consecutive": 608,
+        "client": "Cliente General",
+        "total": 18000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-29",
+        "cufe": null
+    },
+    {
+        "pk": 1468,
+        "consecutive": 607,
+        "client": "Cliente General",
+        "total": 28800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-29",
+        "cufe": null
+    },
+    {
+        "pk": 1466,
+        "consecutive": 606,
+        "client": "Cliente General",
+        "total": 67000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-29",
+        "cufe": null
+    },
+    {
+        "pk": 1465,
+        "consecutive": 605,
+        "client": "Cliente General",
+        "total": 16000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-29",
+        "cufe": null
+    },
+    {
+        "pk": 1464,
+        "consecutive": 604,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-29",
+        "cufe": null
+    },
+    {
+        "pk": 1463,
+        "consecutive": 603,
+        "client": "Cliente General",
+        "total": 124500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1458,
+        "consecutive": 602,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1457,
+        "consecutive": 601,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1456,
+        "consecutive": 600,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1454,
+        "consecutive": 599,
+        "client": "Cliente General",
+        "total": 72000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1452,
+        "consecutive": 598,
+        "client": "Cliente General",
+        "total": 32000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1451,
+        "consecutive": 597,
+        "client": "Cliente General",
+        "total": 26200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1447,
+        "consecutive": 596,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1446,
+        "consecutive": 595,
+        "client": "Cliente General",
+        "total": 151800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1440,
+        "consecutive": 594,
+        "client": "Cliente General",
+        "total": 478500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-28",
+        "cufe": null
+    },
+    {
+        "pk": 1436,
+        "consecutive": 593,
+        "client": "Cliente General",
+        "total": 88400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1431,
+        "consecutive": 592,
+        "client": "Cliente General",
+        "total": 16000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1430,
+        "consecutive": 591,
+        "client": "Cliente General",
+        "total": 203000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1428,
+        "consecutive": 590,
+        "client": "Cliente General",
+        "total": 201000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1425,
+        "consecutive": 589,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1424,
+        "consecutive": 588,
+        "client": "Cliente General",
+        "total": 137700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1415,
+        "consecutive": 587,
+        "client": "Cliente General",
+        "total": 136900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1411,
+        "consecutive": 586,
+        "client": "Cliente General",
+        "total": 33700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1407,
+        "consecutive": 585,
+        "client": "Cliente General",
+        "total": 15800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1405,
+        "consecutive": 584,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1404,
+        "consecutive": 583,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1403,
+        "consecutive": 582,
+        "client": "Cliente General",
+        "total": 172500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1402,
+        "consecutive": 581,
+        "client": "Cliente General",
+        "total": 5600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1400,
+        "consecutive": 580,
+        "client": "Cliente General",
+        "total": 28200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-27",
+        "cufe": null
+    },
+    {
+        "pk": 1396,
+        "consecutive": 579,
+        "client": "Cliente General",
+        "total": 187000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1387,
+        "consecutive": 578,
+        "client": "Cliente General",
+        "total": 113100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1384,
+        "consecutive": 577,
+        "client": "Cliente General",
+        "total": 178000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1380,
+        "consecutive": 576,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1379,
+        "consecutive": 575,
+        "client": "Cliente General",
+        "total": 35000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1378,
+        "consecutive": 574,
+        "client": "Cliente General",
+        "total": 29500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1375,
+        "consecutive": 573,
+        "client": "Cliente General",
+        "total": 8800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1374,
+        "consecutive": 572,
+        "client": "Cliente General",
+        "total": 19300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1372,
+        "consecutive": 571,
+        "client": "Cliente General",
+        "total": 5000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1371,
+        "consecutive": 570,
+        "client": "Cliente General",
+        "total": 193000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1369,
+        "consecutive": 569,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1368,
+        "consecutive": 568,
+        "client": "Cliente General",
+        "total": 68300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-25",
+        "cufe": null
+    },
+    {
+        "pk": 1365,
+        "consecutive": 567,
+        "client": "Cliente General",
+        "total": 35000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1364,
+        "consecutive": 566,
+        "client": "Cliente General",
+        "total": 47500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1362,
+        "consecutive": 565,
+        "client": "Cliente General",
+        "total": 34500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1361,
+        "consecutive": 564,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1360,
+        "consecutive": 563,
+        "client": "Cliente General",
+        "total": 19500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1358,
+        "consecutive": 562,
+        "client": "Cliente General",
+        "total": 18000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1357,
+        "consecutive": 561,
+        "client": "Cliente General",
+        "total": 102000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1355,
+        "consecutive": 560,
+        "client": "Cliente General",
+        "total": 670000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1350,
+        "consecutive": 559,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-24",
+        "cufe": null
+    },
+    {
+        "pk": 1349,
+        "consecutive": 558,
+        "client": "Cliente General",
+        "total": 137500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1346,
+        "consecutive": 557,
+        "client": "Cliente General",
+        "total": 74000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1345,
+        "consecutive": 556,
+        "client": "Cliente General",
+        "total": 13500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1344,
+        "consecutive": 555,
+        "client": "Cliente General",
+        "total": 50400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1342,
+        "consecutive": 554,
+        "client": "Cliente General",
+        "total": 14400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1341,
+        "consecutive": 553,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1339,
+        "consecutive": 552,
+        "client": "Cliente General",
+        "total": 114000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1338,
+        "consecutive": 551,
+        "client": "Cliente General",
+        "total": 38000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1337,
+        "consecutive": 550,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1336,
+        "consecutive": 549,
+        "client": "Cliente General",
+        "total": 10500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1335,
+        "consecutive": 548,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1334,
+        "consecutive": 547,
+        "client": "Cliente General",
+        "total": 30000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1333,
+        "consecutive": 546,
+        "client": "Cliente General",
+        "total": 8500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1332,
+        "consecutive": 545,
+        "client": "Cliente General",
+        "total": 7500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-23",
+        "cufe": null
+    },
+    {
+        "pk": 1331,
+        "consecutive": 544,
+        "client": "Cliente General",
+        "total": 3.46846178991015e+16,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1330,
+        "consecutive": 543,
+        "client": "Cliente General",
+        "total": 74800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1325,
+        "consecutive": 542,
+        "client": "Cliente General",
+        "total": 163300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1315,
+        "consecutive": 541,
+        "client": "Cliente General",
+        "total": 38000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1313,
+        "consecutive": 540,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1312,
+        "consecutive": 539,
+        "client": "Cliente General",
+        "total": 95300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1305,
+        "consecutive": 538,
+        "client": "Cliente General",
+        "total": 1182100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1301,
+        "consecutive": 537,
+        "client": "Cliente General",
+        "total": 67000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1299,
+        "consecutive": 536,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1298,
+        "consecutive": 535,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1297,
+        "consecutive": 534,
+        "client": "Cliente General",
+        "total": 6800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1296,
+        "consecutive": 533,
+        "client": "Cliente General",
+        "total": 59800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1292,
+        "consecutive": 532,
+        "client": "Cliente General",
+        "total": 4500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1291,
+        "consecutive": 531,
+        "client": "Cliente General",
+        "total": 21400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1289,
+        "consecutive": 530,
+        "client": "Cliente General",
+        "total": 556700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1283,
+        "consecutive": 529,
+        "client": "Cliente General",
+        "total": 175000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1281,
+        "consecutive": 528,
+        "client": "Cliente General",
+        "total": 407500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1279,
+        "consecutive": 527,
+        "client": "Cliente General",
+        "total": 9500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1277,
+        "consecutive": 526,
+        "client": "Cliente General",
+        "total": 3000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-22",
+        "cufe": null
+    },
+    {
+        "pk": 1276,
+        "consecutive": 525,
+        "client": "Cliente General",
+        "total": 72700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1272,
+        "consecutive": 524,
+        "client": "Cliente General",
+        "total": 60800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1269,
+        "consecutive": 523,
+        "client": "Cliente General",
+        "total": 29500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1267,
+        "consecutive": 522,
+        "client": "Cliente General",
+        "total": 69000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1266,
+        "consecutive": 521,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1265,
+        "consecutive": 520,
+        "client": "Cliente General",
+        "total": 33000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1264,
+        "consecutive": 519,
+        "client": "Cliente General",
+        "total": 13000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1263,
+        "consecutive": 518,
+        "client": "Cliente General",
+        "total": 17500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1262,
+        "consecutive": 517,
+        "client": "Cliente General",
+        "total": 181200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1257,
+        "consecutive": 516,
+        "client": "Cliente General",
+        "total": 14400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1255,
+        "consecutive": 515,
+        "client": "Cliente General",
+        "total": 184200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1241,
+        "consecutive": 514,
+        "client": "Cliente General",
+        "total": 5700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1239,
+        "consecutive": 513,
+        "client": "Cliente General",
+        "total": 223000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-21",
+        "cufe": null
+    },
+    {
+        "pk": 1235,
+        "consecutive": 512,
+        "client": "Cliente General",
+        "total": 65900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-20",
+        "cufe": null
+    },
+    {
+        "pk": 1231,
+        "consecutive": 511,
+        "client": "Cliente General",
+        "total": 62800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-20",
+        "cufe": null
+    },
+    {
+        "pk": 1228,
+        "consecutive": 510,
+        "client": "Cliente General",
+        "total": 77400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-20",
+        "cufe": null
+    },
+    {
+        "pk": 1221,
+        "consecutive": 509,
+        "client": "Cliente General",
+        "total": 70000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-20",
+        "cufe": null
+    },
+    {
+        "pk": 1216,
+        "consecutive": 508,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-20",
+        "cufe": null
+    },
+    {
+        "pk": 1215,
+        "consecutive": 507,
+        "client": "Cliente General",
+        "total": 3000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-20",
+        "cufe": null
+    },
+    {
+        "pk": 1214,
+        "consecutive": 506,
+        "client": "Cliente General",
+        "total": 24500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1213,
+        "consecutive": 505,
+        "client": "Cliente General",
+        "total": 11800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1209,
+        "consecutive": 504,
+        "client": "Cliente General",
+        "total": 300000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1208,
+        "consecutive": 503,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1207,
+        "consecutive": 502,
+        "client": "Cliente General",
+        "total": 187000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1205,
+        "consecutive": 501,
+        "client": "Cliente General",
+        "total": 47700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1203,
+        "consecutive": 500,
+        "client": "Cliente General",
+        "total": 23000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1202,
+        "consecutive": 499,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1201,
+        "consecutive": 498,
+        "client": "Cliente General",
+        "total": 68000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1199,
+        "consecutive": 497,
+        "client": "Cliente General",
+        "total": 27000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1197,
+        "consecutive": 496,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1196,
+        "consecutive": 495,
+        "client": "Cliente General",
+        "total": 10300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1194,
+        "consecutive": 494,
+        "client": "Cliente General",
+        "total": 8500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1193,
+        "consecutive": 493,
+        "client": "Cliente General",
+        "total": 8800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1192,
+        "consecutive": 492,
+        "client": "Cliente General",
+        "total": 8500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1191,
+        "consecutive": 491,
+        "client": "Cliente General",
+        "total": 26500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1189,
+        "consecutive": 490,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1188,
+        "consecutive": 489,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1187,
+        "consecutive": 488,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1186,
+        "consecutive": 487,
+        "client": "Cliente General",
+        "total": 31800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1182,
+        "consecutive": 486,
+        "client": "Cliente General",
+        "total": 5000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1181,
+        "consecutive": 485,
+        "client": "Cliente General",
+        "total": 97000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1173,
+        "consecutive": 484,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1172,
+        "consecutive": 483,
+        "client": "Cliente General",
+        "total": 100500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1171,
+        "consecutive": 482,
+        "client": "Cliente General",
+        "total": 40000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1169,
+        "consecutive": 481,
+        "client": "Cliente General",
+        "total": 700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1168,
+        "consecutive": 480,
+        "client": "Cliente General",
+        "total": 2200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-19",
+        "cufe": null
+    },
+    {
+        "pk": 1167,
+        "consecutive": 479,
+        "client": "Cliente General",
+        "total": 7000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1166,
+        "consecutive": 478,
+        "client": "Cliente General",
+        "total": 83500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1161,
+        "consecutive": 477,
+        "client": "Cliente General",
+        "total": 39800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1156,
+        "consecutive": 476,
+        "client": "Cliente General",
+        "total": 1500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1155,
+        "consecutive": 475,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1154,
+        "consecutive": 474,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1153,
+        "consecutive": 473,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1152,
+        "consecutive": 472,
+        "client": "Cliente General",
+        "total": 4700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1150,
+        "consecutive": 471,
+        "client": "Cliente General",
+        "total": 32000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1149,
+        "consecutive": 470,
+        "client": "Cliente General",
+        "total": 2400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1148,
+        "consecutive": 469,
+        "client": "Cliente General",
+        "total": 225000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1142,
+        "consecutive": 468,
+        "client": "Cliente General",
+        "total": 132000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1141,
+        "consecutive": 467,
+        "client": "Cliente General",
+        "total": 148100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1130,
+        "consecutive": 466,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1129,
+        "consecutive": 465,
+        "client": "Cliente General",
+        "total": 331000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1126,
+        "consecutive": 464,
+        "client": "Cliente General",
+        "total": 153200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1122,
+        "consecutive": 463,
+        "client": "Cliente General",
+        "total": 30200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1118,
+        "consecutive": 462,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1117,
+        "consecutive": 461,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-18",
+        "cufe": null
+    },
+    {
+        "pk": 1116,
+        "consecutive": 460,
+        "client": "Cliente General",
+        "total": 3800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1115,
+        "consecutive": 459,
+        "client": "Cliente General",
+        "total": 8000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1114,
+        "consecutive": 458,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1113,
+        "consecutive": 457,
+        "client": "Cliente General",
+        "total": 29400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1112,
+        "consecutive": 456,
+        "client": "Cliente General",
+        "total": 37200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1110,
+        "consecutive": 455,
+        "client": "Cliente General",
+        "total": 55000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1108,
+        "consecutive": 454,
+        "client": "Cliente General",
+        "total": 4.4700964827232104e+16,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1098,
+        "consecutive": 453,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1097,
+        "consecutive": 452,
+        "client": "Cliente General",
+        "total": 370000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1093,
+        "consecutive": 451,
+        "client": "Cliente General",
+        "total": 103500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1092,
+        "consecutive": 450,
+        "client": "Cliente General",
+        "total": 29500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1089,
+        "consecutive": 449,
+        "client": "Cliente General",
+        "total": 57900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1084,
+        "consecutive": 448,
+        "client": "Cliente General",
+        "total": 344900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-17",
+        "cufe": null
+    },
+    {
+        "pk": 1079,
+        "consecutive": 447,
+        "client": "Cliente General",
+        "total": 912100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1073,
+        "consecutive": 446,
+        "client": "Cliente General",
+        "total": 101000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1071,
+        "consecutive": 445,
+        "client": "Cliente General",
+        "total": 4.6243584120583704e+16,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1064,
+        "consecutive": 444,
+        "client": "Cliente General",
+        "total": 33300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1060,
+        "consecutive": 443,
+        "client": "Cliente General",
+        "total": 35000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1059,
+        "consecutive": 442,
+        "client": "Cliente General",
+        "total": 8000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1058,
+        "consecutive": 441,
+        "client": "Cliente General",
+        "total": 8500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1057,
+        "consecutive": 440,
+        "client": "Cliente General",
+        "total": 67500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1053,
+        "consecutive": 439,
+        "client": "Cliente General",
+        "total": 3000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1052,
+        "consecutive": 438,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1050,
+        "consecutive": 437,
+        "client": "Cliente General",
+        "total": 3500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1049,
+        "consecutive": 436,
+        "client": "Cliente General",
+        "total": 27600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1046,
+        "consecutive": 435,
+        "client": "Cliente General",
+        "total": 2800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1045,
+        "consecutive": 434,
+        "client": "Cliente General",
+        "total": 13000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1044,
+        "consecutive": 433,
+        "client": "Cliente General",
+        "total": 19500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1042,
+        "consecutive": 432,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1041,
+        "consecutive": 431,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1040,
+        "consecutive": 430,
+        "client": "Cliente General",
+        "total": 2000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1039,
+        "consecutive": 429,
+        "client": "Cliente General",
+        "total": 506000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-16",
+        "cufe": null
+    },
+    {
+        "pk": 1035,
+        "consecutive": 428,
+        "client": "Cliente General",
+        "total": 23000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1034,
+        "consecutive": 427,
+        "client": "Cliente General",
+        "total": 190000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1033,
+        "consecutive": 426,
+        "client": "Cliente General",
+        "total": 36700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1028,
+        "consecutive": 425,
+        "client": "Cliente General",
+        "total": 700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1027,
+        "consecutive": 424,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1025,
+        "consecutive": 423,
+        "client": "Cliente General",
+        "total": 29500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1021,
+        "consecutive": 422,
+        "client": "Cliente General",
+        "total": 3900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1020,
+        "consecutive": 421,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1019,
+        "consecutive": 420,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1018,
+        "consecutive": 419,
+        "client": "Cliente General",
+        "total": 103000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1017,
+        "consecutive": 418,
+        "client": "Cliente General",
+        "total": 8000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1016,
+        "consecutive": 417,
+        "client": "Cliente General",
+        "total": 19000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1014,
+        "consecutive": 416,
+        "client": "Cliente General",
+        "total": 17400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1011,
+        "consecutive": 415,
+        "client": "Cliente General",
+        "total": 38300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1008,
+        "consecutive": 414,
+        "client": "Cliente General",
+        "total": 7500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1006,
+        "consecutive": 413,
+        "client": "Cliente General",
+        "total": 7500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1005,
+        "consecutive": 412,
+        "client": "Cliente General",
+        "total": 4800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1004,
+        "consecutive": 411,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1003,
+        "consecutive": 410,
+        "client": "Cliente General",
+        "total": 34500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-15",
+        "cufe": null
+    },
+    {
+        "pk": 1002,
+        "consecutive": 409,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-14",
+        "cufe": null
+    },
+    {
+        "pk": 1001,
+        "consecutive": 408,
+        "client": "Cliente General",
+        "total": 55000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-14",
+        "cufe": null
+    },
+    {
+        "pk": 1000,
+        "consecutive": 407,
+        "client": "Cliente General",
+        "total": 502500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-14",
+        "cufe": null
+    },
+    {
+        "pk": 999,
+        "consecutive": 406,
+        "client": "Cliente General",
+        "total": 208000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-14",
+        "cufe": null
+    },
+    {
+        "pk": 998,
+        "consecutive": 405,
+        "client": "Cliente General",
+        "total": 172500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-14",
+        "cufe": null
+    },
+    {
+        "pk": 997,
+        "consecutive": 404,
+        "client": "Cliente General",
+        "total": 410900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-13",
+        "cufe": null
+    },
+    {
+        "pk": 985,
+        "consecutive": 403,
+        "client": "Cliente General",
+        "total": 20500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-13",
+        "cufe": null
+    },
+    {
+        "pk": 983,
+        "consecutive": 402,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-13",
+        "cufe": null
+    },
+    {
+        "pk": 982,
+        "consecutive": 401,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-13",
+        "cufe": null
+    },
+    {
+        "pk": 963,
+        "consecutive": 396,
+        "client": "Cliente General",
+        "total": 418000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-12",
+        "cufe": null
+    },
+    {
+        "pk": 958,
+        "consecutive": 395,
+        "client": "Cliente General",
+        "total": 72000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 957,
+        "consecutive": 394,
+        "client": "Cliente General",
+        "total": 289500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 954,
+        "consecutive": 393,
+        "client": "Cliente General",
+        "total": 114000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 951,
+        "consecutive": 392,
+        "client": "Cliente General",
+        "total": 68000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 946,
+        "consecutive": 391,
+        "client": "Cliente General",
+        "total": 60000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 945,
+        "consecutive": 390,
+        "client": "Cliente General",
+        "total": 88000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 944,
+        "consecutive": 389,
+        "client": "Cliente General",
+        "total": 5900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-11",
+        "cufe": null
+    },
+    {
+        "pk": 941,
+        "consecutive": 388,
+        "client": "Cliente General",
+        "total": 39000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 939,
+        "consecutive": 387,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 938,
+        "consecutive": 386,
+        "client": "Cliente General",
+        "total": 248000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 937,
+        "consecutive": 385,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 936,
+        "consecutive": 384,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 935,
+        "consecutive": 383,
+        "client": "Cliente General",
+        "total": 134000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 934,
+        "consecutive": 382,
+        "client": "Cliente General",
+        "total": 93100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 926,
+        "consecutive": 381,
+        "client": "Cliente General",
+        "total": 13000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 925,
+        "consecutive": 380,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 924,
+        "consecutive": 379,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 923,
+        "consecutive": 378,
+        "client": "Cliente General",
+        "total": 566000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 912,
+        "consecutive": 377,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-10",
+        "cufe": null
+    },
+    {
+        "pk": 911,
+        "consecutive": 376,
+        "client": "Cliente General",
+        "total": 118500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 905,
+        "consecutive": 375,
+        "client": "Cliente General",
+        "total": 15100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 903,
+        "consecutive": 374,
+        "client": "Cliente General",
+        "total": 5200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 901,
+        "consecutive": 373,
+        "client": "Cliente General",
+        "total": 70900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 898,
+        "consecutive": 372,
+        "client": "Cliente General",
+        "total": 241800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 892,
+        "consecutive": 371,
+        "client": "Cliente General",
+        "total": 78000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 890,
+        "consecutive": 370,
+        "client": "Cliente General",
+        "total": 502500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 889,
+        "consecutive": 369,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 888,
+        "consecutive": 368,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 887,
+        "consecutive": 367,
+        "client": "Cliente General",
+        "total": 23800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 883,
+        "consecutive": 366,
+        "client": "Cliente General",
+        "total": 22800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 881,
+        "consecutive": 365,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 880,
+        "consecutive": 364,
+        "client": "Cliente General",
+        "total": 13000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 879,
+        "consecutive": 363,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 878,
+        "consecutive": 362,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 877,
+        "consecutive": 361,
+        "client": "Cliente General",
+        "total": 3500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 876,
+        "consecutive": 360,
+        "client": "Cliente General",
+        "total": 38500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 874,
+        "consecutive": 359,
+        "client": "Cliente General",
+        "total": 32000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-09",
+        "cufe": null
+    },
+    {
+        "pk": 873,
+        "consecutive": 358,
+        "client": "Cliente General",
+        "total": 541800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 865,
+        "consecutive": 357,
+        "client": "Cliente General",
+        "total": 52500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 862,
+        "consecutive": 356,
+        "client": "Cliente General",
+        "total": 6600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 859,
+        "consecutive": 355,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 858,
+        "consecutive": 354,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 857,
+        "consecutive": 353,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 856,
+        "consecutive": 352,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 855,
+        "consecutive": 351,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 854,
+        "consecutive": 350,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 853,
+        "consecutive": 349,
+        "client": "Cliente General",
+        "total": 100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 852,
+        "consecutive": 348,
+        "client": "Cliente General",
+        "total": 60000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 851,
+        "consecutive": 347,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 850,
+        "consecutive": 346,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 849,
+        "consecutive": 345,
+        "client": "Cliente General",
+        "total": 221200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 841,
+        "consecutive": 344,
+        "client": "Cliente General",
+        "total": 29000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 839,
+        "consecutive": 343,
+        "client": "Cliente General",
+        "total": 22500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 838,
+        "consecutive": 342,
+        "client": "Cliente General",
+        "total": 60000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 837,
+        "consecutive": 341,
+        "client": "Cliente General",
+        "total": 22500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 835,
+        "consecutive": 340,
+        "client": "Cliente General",
+        "total": 58500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 833,
+        "consecutive": 339,
+        "client": "Cliente General",
+        "total": 957500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-08",
+        "cufe": null
+    },
+    {
+        "pk": 831,
+        "consecutive": 338,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 830,
+        "consecutive": 337,
+        "client": "Cliente General",
+        "total": 90300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 824,
+        "consecutive": 336,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 823,
+        "consecutive": 335,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 822,
+        "consecutive": 334,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 821,
+        "consecutive": 333,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 820,
+        "consecutive": 332,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 819,
+        "consecutive": 331,
+        "client": "Cliente General",
+        "total": 52100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 814,
+        "consecutive": 330,
+        "client": "Cliente General",
+        "total": 34500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 813,
+        "consecutive": 329,
+        "client": "Cliente General",
+        "total": 175000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 812,
+        "consecutive": 328,
+        "client": "Cliente General",
+        "total": 11000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 810,
+        "consecutive": 327,
+        "client": "Cliente General",
+        "total": 60000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 809,
+        "consecutive": 326,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 808,
+        "consecutive": 325,
+        "client": "Cliente General",
+        "total": 9200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 807,
+        "consecutive": 324,
+        "client": "Cliente General",
+        "total": 1600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 805,
+        "consecutive": 323,
+        "client": "Cliente General",
+        "total": 8500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 803,
+        "consecutive": 322,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-07",
+        "cufe": null
+    },
+    {
+        "pk": 802,
+        "consecutive": 321,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 801,
+        "consecutive": 320,
+        "client": "Cliente General",
+        "total": 7000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 800,
+        "consecutive": 319,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 799,
+        "consecutive": 318,
+        "client": "Cliente General",
+        "total": 7300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 797,
+        "consecutive": 317,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 796,
+        "consecutive": 316,
+        "client": "Cliente General",
+        "total": 13000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 795,
+        "consecutive": 315,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 794,
+        "consecutive": 314,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 793,
+        "consecutive": 313,
+        "client": "Cliente General",
+        "total": 1200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 792,
+        "consecutive": 312,
+        "client": "Cliente General",
+        "total": 87600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 790,
+        "consecutive": 311,
+        "client": "Cliente General",
+        "total": 24400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 787,
+        "consecutive": 310,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 786,
+        "consecutive": 309,
+        "client": "Cliente General",
+        "total": 11200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 784,
+        "consecutive": 308,
+        "client": "Cliente General",
+        "total": 69000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 783,
+        "consecutive": 307,
+        "client": "Cliente General",
+        "total": 5000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 782,
+        "consecutive": 306,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-06",
+        "cufe": null
+    },
+    {
+        "pk": 781,
+        "consecutive": 305,
+        "client": "Cliente General",
+        "total": 19800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 779,
+        "consecutive": 304,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 778,
+        "consecutive": 303,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 775,
+        "consecutive": 302,
+        "client": "Cliente General",
+        "total": 15900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 772,
+        "consecutive": 301,
+        "client": "Cliente General",
+        "total": 240000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 771,
+        "consecutive": 300,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 770,
+        "consecutive": 299,
+        "client": "Cliente General",
+        "total": 9000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 768,
+        "consecutive": 298,
+        "client": "Cliente General",
+        "total": 24000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 767,
+        "consecutive": 297,
+        "client": "Cliente General",
+        "total": 17300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 762,
+        "consecutive": 296,
+        "client": "Cliente General",
+        "total": 14000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 760,
+        "consecutive": 295,
+        "client": "Cliente General",
+        "total": 2400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 759,
+        "consecutive": 294,
+        "client": "Cliente General",
+        "total": 77000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 757,
+        "consecutive": 293,
+        "client": "Cliente General",
+        "total": 1200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 756,
+        "consecutive": 292,
+        "client": "Cliente General",
+        "total": 172500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-05",
+        "cufe": null
+    },
+    {
+        "pk": 755,
+        "consecutive": 291,
+        "client": "Cliente General",
+        "total": 4500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 754,
+        "consecutive": 290,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 753,
+        "consecutive": 289,
+        "client": "Cliente General",
+        "total": 17000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 752,
+        "consecutive": 288,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 751,
+        "consecutive": 287,
+        "client": "Cliente General",
+        "total": 7400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 749,
+        "consecutive": 286,
+        "client": "Cliente General",
+        "total": 9600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 748,
+        "consecutive": 285,
+        "client": "Cliente General",
+        "total": 74500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 744,
+        "consecutive": 284,
+        "client": "Cliente General",
+        "total": 63600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 741,
+        "consecutive": 283,
+        "client": "Cliente General",
+        "total": 25000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 740,
+        "consecutive": 282,
+        "client": "Cliente General",
+        "total": 101700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 737,
+        "consecutive": 281,
+        "client": "Cliente General",
+        "total": 19000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 736,
+        "consecutive": 280,
+        "client": "Cliente General",
+        "total": 138000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 735,
+        "consecutive": 279,
+        "client": "Cliente General",
+        "total": 20000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 733,
+        "consecutive": 278,
+        "client": "Cliente General",
+        "total": 88000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 732,
+        "consecutive": 277,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 731,
+        "consecutive": 276,
+        "client": "Cliente General",
+        "total": 125600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 727,
+        "consecutive": 275,
+        "client": "Cliente General",
+        "total": 37800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 725,
+        "consecutive": 274,
+        "client": "Cliente General",
+        "total": 49200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-04",
+        "cufe": null
+    },
+    {
+        "pk": 709,
+        "consecutive": 271,
+        "client": "Cliente General",
+        "total": 7800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 708,
+        "consecutive": 270,
+        "client": "Cliente General",
+        "total": 3500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 707,
+        "consecutive": 269,
+        "client": "Cliente General",
+        "total": 34000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 705,
+        "consecutive": 268,
+        "client": "Cliente General",
+        "total": 37200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 704,
+        "consecutive": 267,
+        "client": "Cliente General",
+        "total": 11000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 702,
+        "consecutive": 265,
+        "client": "Cliente General",
+        "total": 34000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 698,
+        "consecutive": 263,
+        "client": "Cliente General",
+        "total": 13000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 697,
+        "consecutive": 262,
+        "client": "Cliente General",
+        "total": 43000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 695,
+        "consecutive": 261,
+        "client": "Cliente General",
+        "total": 1200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 694,
+        "consecutive": 260,
+        "client": "Cliente General",
+        "total": 50500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 692,
+        "consecutive": 259,
+        "client": "Cliente General",
+        "total": 35400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 690,
+        "consecutive": 258,
+        "client": "Cliente General",
+        "total": 25000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 688,
+        "consecutive": 257,
+        "client": "Cliente General",
+        "total": 162900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 681,
+        "consecutive": 256,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 680,
+        "consecutive": 255,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 679,
+        "consecutive": 254,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 678,
+        "consecutive": 253,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 677,
+        "consecutive": 252,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 676,
+        "consecutive": 251,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 675,
+        "consecutive": 250,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 674,
+        "consecutive": 249,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 673,
+        "consecutive": 248,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 672,
+        "consecutive": 247,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 671,
+        "consecutive": 246,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 670,
+        "consecutive": 245,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 669,
+        "consecutive": 244,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 668,
+        "consecutive": 243,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 667,
+        "consecutive": 242,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 666,
+        "consecutive": 241,
+        "client": "Cliente General",
+        "total": 10.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 664,
+        "consecutive": 239,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-02",
+        "cufe": null
+    },
+    {
+        "pk": 663,
+        "consecutive": 238,
+        "client": "Cliente General",
+        "total": 25700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 660,
+        "consecutive": 237,
+        "client": "Cliente General",
+        "total": 37500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 658,
+        "consecutive": 236,
+        "client": "Cliente General",
+        "total": 70400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 653,
+        "consecutive": 235,
+        "client": "Cliente General",
+        "total": 95500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 651,
+        "consecutive": 234,
+        "client": "Cliente General",
+        "total": 59200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 649,
+        "consecutive": 233,
+        "client": "Cliente General",
+        "total": 120000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 648,
+        "consecutive": 232,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 647,
+        "consecutive": 231,
+        "client": "Cliente General",
+        "total": 55000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 646,
+        "consecutive": 230,
+        "client": "Cliente General",
+        "total": 7500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 645,
+        "consecutive": 229,
+        "client": "Cliente General",
+        "total": 7500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 644,
+        "consecutive": 228,
+        "client": "Cliente General",
+        "total": 1600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 643,
+        "consecutive": 227,
+        "client": "Cliente General",
+        "total": 42500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 640,
+        "consecutive": 226,
+        "client": "Cliente General",
+        "total": 40000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 638,
+        "consecutive": 225,
+        "client": "Cliente General",
+        "total": 17000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 637,
+        "consecutive": 224,
+        "client": "Cliente General",
+        "total": 135700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-03-01",
+        "cufe": null
+    },
+    {
+        "pk": 632,
+        "consecutive": 223,
+        "client": "Cliente General",
+        "total": 55000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 628,
+        "consecutive": 222,
+        "client": "Cliente General",
+        "total": 6500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 627,
+        "consecutive": 221,
+        "client": "Cliente General",
+        "total": 10800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 625,
+        "consecutive": 220,
+        "client": "Cliente General",
+        "total": 2400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 624,
+        "consecutive": 219,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 623,
+        "consecutive": 218,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 622,
+        "consecutive": 217,
+        "client": "Cliente General",
+        "total": 165500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-28",
+        "cufe": null
+    },
+    {
+        "pk": 613,
+        "consecutive": 216,
+        "client": "Cliente General",
+        "total": 231900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 606,
+        "consecutive": 215,
+        "client": "Cliente General",
+        "total": 800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 605,
+        "consecutive": 214,
+        "client": "Cliente General",
+        "total": 8400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 602,
+        "consecutive": 213,
+        "client": "Cliente General",
+        "total": 28000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 601,
+        "consecutive": 212,
+        "client": "Cliente General",
+        "total": 30000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 598,
+        "consecutive": 211,
+        "client": "Cliente General",
+        "total": 21000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 597,
+        "consecutive": 210,
+        "client": "Cliente General",
+        "total": 14500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 595,
+        "consecutive": 209,
+        "client": "Cliente General",
+        "total": 1700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 593,
+        "consecutive": 208,
+        "client": "Cliente General",
+        "total": 5500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 592,
+        "consecutive": 207,
+        "client": "Cliente General",
+        "total": 5500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 591,
+        "consecutive": 206,
+        "client": "Cliente General",
+        "total": 1.001260141183465e+17,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 586,
+        "consecutive": 205,
+        "client": "Cliente General",
+        "total": 54800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 583,
+        "consecutive": 204,
+        "client": "Cliente General",
+        "total": 183900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 564,
+        "consecutive": 203,
+        "client": "Cliente General",
+        "total": 66700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 558,
+        "consecutive": 202,
+        "client": "Cliente General",
+        "total": 56000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 557,
+        "consecutive": 201,
+        "client": "Cliente General",
+        "total": 40000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 555,
+        "consecutive": 200,
+        "client": "Cliente General",
+        "total": 6700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 553,
+        "consecutive": 199,
+        "client": "Cliente General",
+        "total": 24500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-27",
+        "cufe": null
+    },
+    {
+        "pk": 551,
+        "consecutive": 198,
+        "client": "Cliente General",
+        "total": 2800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 550,
+        "consecutive": 197,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 549,
+        "consecutive": 196,
+        "client": "Cliente General",
+        "total": 86000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 548,
+        "consecutive": 195,
+        "client": "Cliente General",
+        "total": 45000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 547,
+        "consecutive": 194,
+        "client": "Cliente General",
+        "total": 4600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 546,
+        "consecutive": 193,
+        "client": "Cliente General",
+        "total": 18000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 544,
+        "consecutive": 192,
+        "client": "Cliente General",
+        "total": 37000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 543,
+        "consecutive": 191,
+        "client": "Cliente General",
+        "total": 33000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 541,
+        "consecutive": 190,
+        "client": "Cliente General",
+        "total": 34500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 539,
+        "consecutive": 189,
+        "client": "Cliente General",
+        "total": 64500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 534,
+        "consecutive": 188,
+        "client": "Cliente General",
+        "total": 89000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 532,
+        "consecutive": 187,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 531,
+        "consecutive": 186,
+        "client": "Cliente General",
+        "total": 2400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 529,
+        "consecutive": 185,
+        "client": "Cliente General",
+        "total": 153000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 527,
+        "consecutive": 184,
+        "client": "Cliente General",
+        "total": 22200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 525,
+        "consecutive": 183,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 524,
+        "consecutive": 182,
+        "client": "Cliente General",
+        "total": 25000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 523,
+        "consecutive": 181,
+        "client": "Cliente General",
+        "total": 69000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 520,
+        "consecutive": 180,
+        "client": "Cliente General",
+        "total": 103500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 519,
+        "consecutive": 179,
+        "client": "Cliente General",
+        "total": 7800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-25",
+        "cufe": null
+    },
+    {
+        "pk": 518,
+        "consecutive": 178,
+        "client": "Cliente General",
+        "total": 13800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 516,
+        "consecutive": 177,
+        "client": "Cliente General",
+        "total": 4500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 515,
+        "consecutive": 176,
+        "client": "Cliente General",
+        "total": 71800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 512,
+        "consecutive": 175,
+        "client": "Cliente General",
+        "total": 16000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 511,
+        "consecutive": 174,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 510,
+        "consecutive": 173,
+        "client": "Cliente General",
+        "total": 10000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 509,
+        "consecutive": 172,
+        "client": "Cliente General",
+        "total": 9800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 507,
+        "consecutive": 171,
+        "client": "Cliente General",
+        "total": 19500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 505,
+        "consecutive": 170,
+        "client": "Cliente General",
+        "total": 17200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 503,
+        "consecutive": 169,
+        "client": "Cliente General",
+        "total": 532100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 495,
+        "consecutive": 168,
+        "client": "Cliente General",
+        "total": 81000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 492,
+        "consecutive": 167,
+        "client": "Cliente General",
+        "total": 626200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 489,
+        "consecutive": 166,
+        "client": "Cliente General",
+        "total": 42000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 488,
+        "consecutive": 165,
+        "client": "Cliente General",
+        "total": 42500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 487,
+        "consecutive": 164,
+        "client": "Cliente General",
+        "total": 18000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-24",
+        "cufe": null
+    },
+    {
+        "pk": 486,
+        "consecutive": 163,
+        "client": "Cliente General",
+        "total": 5500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 485,
+        "consecutive": 162,
+        "client": "Cliente General",
+        "total": 3000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 484,
+        "consecutive": 161,
+        "client": "Cliente General",
+        "total": 17800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 482,
+        "consecutive": 160,
+        "client": "Cliente General",
+        "total": 91100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 478,
+        "consecutive": 159,
+        "client": "Cliente General",
+        "total": 28700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 476,
+        "consecutive": 158,
+        "client": "Cliente General",
+        "total": 90000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 475,
+        "consecutive": 157,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 474,
+        "consecutive": 156,
+        "client": "Cliente General",
+        "total": 53000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 473,
+        "consecutive": 155,
+        "client": "Cliente General",
+        "total": 119200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 469,
+        "consecutive": 154,
+        "client": "Cliente General",
+        "total": 95200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 465,
+        "consecutive": 153,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-23",
+        "cufe": null
+    },
+    {
+        "pk": 464,
+        "consecutive": 152,
+        "client": "Cliente General",
+        "total": 11000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 462,
+        "consecutive": 151,
+        "client": "Cliente General",
+        "total": 9000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 461,
+        "consecutive": 150,
+        "client": "Cliente General",
+        "total": 12100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 459,
+        "consecutive": 149,
+        "client": "Cliente General",
+        "total": 13400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 456,
+        "consecutive": 148,
+        "client": "Cliente General",
+        "total": 28100.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 453,
+        "consecutive": 147,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 451,
+        "consecutive": 146,
+        "client": "Cliente General",
+        "total": 11000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 450,
+        "consecutive": 145,
+        "client": "Cliente General",
+        "total": 1400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 449,
+        "consecutive": 144,
+        "client": "Cliente General",
+        "total": 13500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 447,
+        "consecutive": 143,
+        "client": "Cliente General",
+        "total": 1900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 445,
+        "consecutive": 142,
+        "client": "Cliente General",
+        "total": 600000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 444,
+        "consecutive": 141,
+        "client": "Cliente General",
+        "total": 4500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 443,
+        "consecutive": 140,
+        "client": "Cliente General",
+        "total": 20000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 442,
+        "consecutive": 139,
+        "client": "Cliente General",
+        "total": 34500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 441,
+        "consecutive": 138,
+        "client": "Cliente General",
+        "total": 37500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 440,
+        "consecutive": 137,
+        "client": "Cliente General",
+        "total": 84000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 438,
+        "consecutive": 136,
+        "client": "Cliente General",
+        "total": 6000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 437,
+        "consecutive": 135,
+        "client": "Cliente General",
+        "total": 57600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 432,
+        "consecutive": 134,
+        "client": "Cliente General",
+        "total": 1000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 431,
+        "consecutive": 133,
+        "client": "Cliente General",
+        "total": 7900.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 429,
+        "consecutive": 132,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 428,
+        "consecutive": 131,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 427,
+        "consecutive": 130,
+        "client": "Cliente General",
+        "total": 4000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 426,
+        "consecutive": 129,
+        "client": "Cliente General",
+        "total": 63300.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-22",
+        "cufe": null
+    },
+    {
+        "pk": 422,
+        "consecutive": 128,
+        "client": "Cliente General",
+        "total": 93800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 419,
+        "consecutive": 127,
+        "client": "Cliente General",
+        "total": 8400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 418,
+        "consecutive": 126,
+        "client": "Cliente General",
+        "total": 48500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 415,
+        "consecutive": 125,
+        "client": "Cliente General",
+        "total": 11000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 414,
+        "consecutive": 124,
+        "client": "Cliente General",
+        "total": 3288605805116000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 412,
+        "consecutive": 123,
+        "client": "Cliente General",
+        "total": 1.109088577969241e+17,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 407,
+        "consecutive": 122,
+        "client": "Cliente General",
+        "total": 138500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 405,
+        "consecutive": 121,
+        "client": "Cliente General",
+        "total": 44000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 404,
+        "consecutive": 120,
+        "client": "Cliente General",
+        "total": 36000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 403,
+        "consecutive": 119,
+        "client": "Cliente General",
+        "total": 74000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 401,
+        "consecutive": 118,
+        "client": "Cliente General",
+        "total": 1500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 400,
+        "consecutive": 117,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 399,
+        "consecutive": 116,
+        "client": "Cliente General",
+        "total": 107400.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 394,
+        "consecutive": 115,
+        "client": "Cliente General",
+        "total": 10200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 392,
+        "consecutive": 114,
+        "client": "Cliente General",
+        "total": 2500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 391,
+        "consecutive": 113,
+        "client": "Cliente General",
+        "total": 22700.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 388,
+        "consecutive": 112,
+        "client": "Cliente General",
+        "total": 80000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 387,
+        "consecutive": 111,
+        "client": "Cliente General",
+        "total": 7500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 386,
+        "consecutive": 110,
+        "client": "Cliente General",
+        "total": 4200.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 385,
+        "consecutive": 109,
+        "client": "Cliente General",
+        "total": 22000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 384,
+        "consecutive": 108,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 383,
+        "consecutive": 107,
+        "client": "Cliente General",
+        "total": 40500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 381,
+        "consecutive": 106,
+        "client": "Cliente General",
+        "total": 490600.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 374,
+        "consecutive": 105,
+        "client": "Cliente General",
+        "total": 48000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 373,
+        "consecutive": 104,
+        "client": "Cliente General",
+        "total": 43000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 369,
+        "consecutive": 103,
+        "client": "Cliente General",
+        "total": 43000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 365,
+        "consecutive": 102,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 364,
+        "consecutive": 101,
+        "client": "Cliente General",
+        "total": 33500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 363,
+        "consecutive": 100,
+        "client": "Cliente General",
+        "total": 12000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-21",
+        "cufe": null
+    },
+    {
+        "pk": 362,
+        "consecutive": 99,
+        "client": "Cliente General",
+        "total": 11500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-20",
+        "cufe": null
+    },
+    {
+        "pk": 361,
+        "consecutive": 98,
+        "client": "Cliente General",
+        "total": 76800.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-20",
+        "cufe": null
+    },
+    {
+        "pk": 359,
+        "consecutive": 97,
+        "client": "Cliente General",
+        "total": 15000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-20",
+        "cufe": null
+    },
+    {
+        "pk": 358,
+        "consecutive": 96,
+        "client": "Cliente General",
+        "total": 4500.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-20",
+        "cufe": null
+    },
+    {
+        "pk": 357,
+        "consecutive": 95,
+        "client": "Cliente General",
+        "total": 5000.0,
+        "state": "Factura Creada con \u00e9xito",
+        "date": "2023-02-20",
         "cufe": null
     }
 ]

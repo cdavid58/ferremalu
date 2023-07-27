@@ -25,7 +25,7 @@
 					</a>
 					<ul class="submenu">
 						<li><a href="{% url 'Create_Invoice_POS' %}">Factura POS</a></li>
-						<li><a href="{% url 'Create_Invoice_FE' %}">Factura Electónica</a></li>
+						<!--<li><a href="{% url 'Create_Invoice_FE' %}">Factura Electónica</a></li>-->
 					</ul>
 				</li>
 				<li class="dropdown">
@@ -35,7 +35,7 @@
 					</a>
 					<ul class="submenu">
 						<li><a href="{% url 'GET_LIST_INVOICE_POS' %}">Factura POS</a></li>
-						<li><a href="{% url 'GET_LIST_INVOICE' %}">Factura Electónica</a></li>
+						<!--<li><a href="{% url 'GET_LIST_INVOICE' %}">Factura Electónica</a></li>-->
 					</ul>
 				</li>
 				<li>
@@ -52,6 +52,11 @@
 				<li>
 					<a href="{% url 'List_Inventory' %}" class="dropdown-toggle no-arrow">
 						<span class="micon"><img src="{% static 'logos_menu/inventory.png' %}"></span><span class="mtext">Inventario</span>
+					</a>
+				</li>
+				<li>
+					<a href="{% url 'Get_Wallet_POS' %}" class="dropdown-toggle no-arrow">
+						<span class="micon"><img src="{% static 'logos_menu/cartera.png' %}"></span><span class="mtext">Cartera</span>
 					</a>
 				</li>
 				{% if request.session.type_employee == 1 %}
@@ -75,6 +80,7 @@
 					</a>
 					<ul class="submenu">
 						<li><a href="{% url 'Invoice' %}">Factura POS</a></li>
+						<li><a href="{% url 'Get_List_Close_Box' %}">Cierre de Caja</a></li>
 					</ul>
 				</li>
 				<!-- <li class="dropdown">

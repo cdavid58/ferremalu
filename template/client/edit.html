@@ -120,11 +120,11 @@
     }
 	$(document).ready(function(){
 
-		GetData("document","http://localhost:8000/static/type_documentI.json","{{c.type_documentI_pk}}")
-		GetData("organization","http://localhost:8000/static/type_organizations.json","{{c.type_organization_pk}}")
-		GetData("regime","http://localhost:8000/static/type_regimen.json","{{c.type_regime_pk}}")
-		GetData("municipality","http://localhost:8000/static/municipalitys.json","{{c.municipality_pk}}")
-		GetData("type_client","http://localhost:8000/static/type_client.json","{{c.type_client}}")
+		GetData("document","https://ferremalu.pythonanywhere.com/static/type_documentI.json","{{c.type_documentI_pk}}")
+		GetData("organization","https://ferremalu.pythonanywhere.com/static/type_organizations.json","{{c.type_organization_pk}}")
+		GetData("regime","https://ferremalu.pythonanywhere.com/static/type_regimen.json","{{c.type_regime_pk}}")
+		GetData("municipality","https://ferremalu.pythonanywhere.com/static/municipalitys.json","{{c.municipality_pk}}")
+		GetData("type_client","https://ferremalu.pythonanywhere.com/static/type_client.json","{{c.type_client}}")
 
 
 		$(".register_client").click(function(){

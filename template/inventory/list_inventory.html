@@ -1,6 +1,17 @@
 {% extends '../base.html' %}
 {% block loading %}Estamos cargando la lista de inventario{% endblock %}
 {% block content %}
+{% if request.session.type_employee == 1 %}
+<div class="page-header">
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<div class="title">
+				<span>Utilidad 1: <strong>{{price_1}}$</strong></span>&nbsp;&nbsp;
+ 			</div>
+		</div>
+	</div>
+</div>
+{% endif %}
 <div class="page-header">
 	<div class="row">
 		<div class="col-md-6 col-sm-12">
@@ -9,12 +20,12 @@
 			</div>
 		</div>
 		{% if request.session.type_employee == 1 %}
-			<div class="col-md-3 col-sm-12 text-right">
+			<div class="col-md-3 col-12 text-right">
 				<a class="btn btn-primary" href="{% url 'Montage_Inventory' %}" role="button">
 					Montar Inventario
 				</a>
 			</div>
-			<div class="col-md-3 col-sm-12 text-right">
+			<div class="col-md-3 col-12 text-right">
 				<a class="btn btn-primary add_product" href="#" role="button">
 					Agregar Producto
 				</a>
@@ -33,13 +44,33 @@
 					<th class="table-plus datatable-nosort" style="width: 10%;">Código</th>
 					<th style="width: 25%;">Producto</th>
 					<th style="width: 7%;">Cantidad</th>
-					<th style="width: 7%;">IVA</th>
+					<th style="width: 7%;">Precio 1</th>
 					{% if request.session.type_employee == 1 %}
 						<th class="datatable-nosort" style="width: 10%;">Action</th>
 					{% endif %}
 				</tr>
 			</thead>
-			<tbody class="father"></tbody>
+			<tbody class="father">
+				{% for i in inventory %}
+					<tr>
+						<td>{{i.code}}</td>
+						<td>{{i.name}}</td>
+						<td>{{i.quanty}}</td>
+						<td>{{i.price_1}}</td>
+						<td>
+							<div class="dropdown">
+								<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+									<i class="dw dw-more"></i>
+								</a>
+								<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+									<a class="dropdown-item" href="{% url 'Edit_Product' i.pk %}"><i class="dw dw-edit"></i> Editar</a>
+									<a class="dropdown-item delete_product" id="{{i.code}}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
+								</div>
+							</div>
+						</td>
+					</tr>
+				{% endfor %}
+			</tbody>
 		</table>
 	</div>
 </div>
@@ -47,16 +78,21 @@
 {% block script %}
 
 <script>
+	let inventory = []
 	function Add_Inventory(){
 		url = '{{json}}'
 		$.get(url, function(data) {
 	        var content = data;
 	        var type_employee = parseInt('{{request.session.type_employee}}')
 	        for(var i = 0; i < content.length; i++){
+	        	inventory.push({
+	        		'pk':content[i].pk,
+	        		"code":content[i].code
+	        	})
 	        	t.row.add([
-					content[i].code, content[i].name, content[i].quanty, content[i].tax, 
+					content[i].code, content[i].name, content[i].quanty, content[i].tax,
 					`
-					${(type_employee == 1) ? 
+					${(type_employee == 1) ?
 							`<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -71,11 +107,23 @@
 							`:''
 						}
 					`
-				]).draw(false);
+				]).draw(false); 	
 	        }
 	    })
 	}
-	
+
+	function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    async function time_sleep() {
+    	await Add_Inventory()
+        for (let i = 0; i < 2; i++) {
+            console.log(`Waiting ${i} seconds...`);
+            await sleep(i * 1000);
+        }
+    }
+
 
     $(document).ready(function(){
 
@@ -95,13 +143,11 @@
 				searchPlaceholder: "Buscar producto",
 				paginate: {
 					next: '<i class="ion-chevron-right"></i>',
-					previous: '<i class="ion-chevron-left"></i>'  
+					previous: '<i class="ion-chevron-left"></i>'
 				}
 			}
     	})
-
-    	Add_Inventory()
-
+    	// time_sleep()
 
 
     	$(".add_product").click(function() {
@@ -109,7 +155,7 @@
     	})
 
     	t.on('click', '.delete_product', function() {
-    		
+
 			id = this.id
 			tr = $(this).closest('tr');
 			t.row(tr).remove().draw(false);

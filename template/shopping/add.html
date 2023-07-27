@@ -62,8 +62,12 @@
 
 			<div class="col-md-4 col-sm-12">
 				<div class="form-group">
-					<label>Código Producto</label>
-					<input type="number" name="code" placeholder="0" class="form-control code_product text-right">
+					<!--<label>Código Producto</label>-->
+					<!--<input type="text" name="code" placeholder="0" class="form-control code_product text-right">-->
+					<label>Producto</label>
+    				<select class="custom-select2 form-control product code_product" id="Lista_Product" name="client" style="width: 100%; height: 38px;">
+    				    <option selected="true" disabled="disabled" value="0">Seleccione Producto</option>
+    				</select>
 				</div>
 			</div>
 			<div class="col-md-3 col-sm-12">
@@ -223,6 +227,18 @@
 	code = null;
 	register = 0;
 	var t = null;
+
+	function GetData(class_container,url){
+		$.get(url, function(data) {
+	        var content = data;
+	        for(var i = 0; i < content.length; i++){
+                $("."+class_container).append(`
+	        		<option value="${content[i]['code']}">${content[i]['name']} - ${content[i]['code']}</option>
+	        	`)
+	        }
+	    })
+	}
+
 	function Search_Product(code){
 		$.ajax({
 			url:"{% url 'Get_Product' %}",
@@ -306,6 +322,8 @@
 	});
 
 	$(document).ready(function () {
+
+	    GetData("product","http://ferremalu.pythonanywhere.com/static/inventory.json")
 
 		invoice_number = null;
 

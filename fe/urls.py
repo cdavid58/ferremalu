@@ -10,6 +10,9 @@ urlpatterns=[
 		url(r'^Date_Expired/$',Date_Expired,name="Date_Expired"),
 		url(r'^GET_LIST_INVOICE/$',GET_LIST_INVOICE,name="GET_LIST_INVOICE"),
 		url(r'^View_Invoice/(\d+)/$',View_Invoice,name="View_Invoice"),
+		url(r'^GET_LIST_NOTE_CREDIT/(\d+)/$',GET_LIST_NOTE_CREDIT,name="GET_LIST_NOTE_CREDIT"),
+		url(r'^CreditNote/(\d+)/(\d+)/$',CreditNote,name="CreditNote"),
 
+		url(r'^SetPayment/$',SetPayment,name="SetPayment"),
 		url(r'^Send_DIAN/$',Send_DIAN,name="Send_DIAN"),
 	]

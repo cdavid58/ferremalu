@@ -1,6 +1,0 @@
-DEBUG:urllib3.connectionpool:Starting new HTTP connection (1): localhost:9090
-DEBUG:urllib3.connectionpool:http://localhost:9090 "POST /invoice_fe/GET_LIST_INVOICE/ HTTP/1.1" 200 1768
-WARNING:django.request:Not Found: /invoice_fe/GET_LIST_INVOICE/vendors/images/github.svg
-WARNING:django.request:Not Found: /invoice_fe/GET_LIST_INVOICE/vendors/images/github.svg
-INFO:django.utils.autoreload:C:\Users\David\Videos\Proyectos_Facturacion\local\facturacion\inventory\views.py changed, reloading.
-DEBUG:asyncio:Using proactor: IocpProactor

@@ -65,7 +65,7 @@
 											<i class="dw dw-more"></i>
 										</a>
 										<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-											<a clasas="dropdown-item" href="http://localhost:8000/Edit/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
+											<a clasas="dropdown-item" href="https://ferremalu.pythonanywhere.com/Edit/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
 											<a class="dropdown-item delete_employee" id="${content[i].pk}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
 										</div>
 									</div>
@@ -77,15 +77,15 @@
 	        	t.row.add([
 					content[i].documentI, content[i].name, content[i].phone, `<span>${(content[i].type_employee == 1) ? "Administrador" : "Cajero "}</span>`,
 					`
-					${(type_employee == 1) ? 
+					${(type_employee == 1) ?
 							`<td>
 								<div class="dropdown">
 									<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
 										<i class="dw dw-more"></i>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-										<a class="dropdown-item" href="http://localhost:8000/Edit/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
-										<a class="dropdown-item delete_employee" id="${content[i]['code']}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
+										<a class="dropdown-item" href="https://ferremalu.pythonanywhere.com/Edit/${content[i]['pk']}"><i class="dw dw-edit"></i> Editar</a>
+										<a class="dropdown-item delete_employee" id="${content[i].pk}" href="javascript:void(0);"><i class="dw dw-trash"></i> Eliminar</a>
 									</div>
 								</div>
 							</td>
@@ -114,7 +114,7 @@
 				searchPlaceholder: "Buscar producto",
 				paginate: {
 					next: '<i class="ion-chevron-right"></i>',
-					previous: '<i class="ion-chevron-left"></i>'  
+					previous: '<i class="ion-chevron-left"></i>'
 				}
 			}
     	})

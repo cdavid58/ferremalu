@@ -23,7 +23,7 @@ def Get_Product(request):
 			data = json.load(file)
 		_data = {}
 		for i in data:
-			if str(i['code']) == str(request.GET['code']):
+			if str(i['code']) == str(request.GET['code']) or str(i['name']) == str(request.GET['code']) or str(i['name']) in str(request.GET['code']):
 				_data = i
 	return HttpResponse(json.dumps(_data))
 
